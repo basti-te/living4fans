@@ -60,8 +60,10 @@ Jedes Produkt-/Kampagnenbild folgt diesen prüfbaren Regeln:
    eine klare Schattenkante nach rechts, gleiche warme, leicht entsättigte
    Gradierung über alle Bilder. Die Räume wechseln, das Licht nie.
 4. Kamera auf Möbelhöhe, Möbel frontal oder leicht gedreht, frei stehend,
-   Boden sichtbar. Keine Menschen, keine Logos, keine Requisiten-Flut
-   (max. 2-3 stille Objekte).
+   Boden sichtbar. Keine Menschen, keine Logos, keine Requisiten-Flut auf
+   der Bühne (max. 2-3 stille Objekte im Raum). Inhalte IN den Fächern des
+   Möbelstücks (Bücher, Keramik) zählen nicht als Bühnen-Requisiten — sie
+   zeigen Funktion, solange sie das Möbelstück nicht verdecken.
 5. Auf dem Bild liegt niemals UI: kein Text, kein Badge, kein Preis, kein
    Verlauf. Einzige Ausnahme ist der Hero: dort dürfen Eyebrow, Displaytitel
    und eine Claim-Zeile stehen — gebündelt in der linken Bildhälfte über
