@@ -3,6 +3,12 @@ export type Cell = "door" | "flap" | "open" | "drawers" | "drawer" | "panel";
 export type Product = {
   slug: string;
   name: string;
+  /** Signatur-Name aus der Farbkarte (z. B. „Enzian") */
+  signature?: string;
+  /** Ort der Signatur-Aufnahme (z. B. „Orangerie") */
+  ort?: string;
+  /** Kampagnenbild unter /public */
+  image?: string;
   category: string;
   categoryLabel: string;
   grid: Cell[][];
@@ -30,6 +36,9 @@ export const PRODUCTS: Product[] = [
   {
     slug: "haller-sideboard-m",
     name: "Haller Sideboard M",
+    signature: "Enzian",
+    ort: "Orangerie",
+    image: "/media/tile-enzian.jpg",
     category: "sideboards",
     categoryLabel: "Sideboard",
     grid: [
@@ -56,20 +65,26 @@ export const PRODUCTS: Product[] = [
   },
   {
     slug: "haller-lowboard-tv",
-    name: "Haller Lowboard TV",
+    name: "Haller Lowboard",
+    signature: "Tanne",
+    ort: "Galerie",
+    image: "/media/tile-tanne.jpg",
     category: "lowboards",
     categoryLabel: "Lowboard",
-    grid: [["flap", "open", "flap", "flap"]],
+    grid: [
+      ["flap", "flap", "flap"],
+      ["open", "open", "open"],
+    ],
     cellW: 150,
-    cellH: 78,
-    dimensions: "B 3023 × H 395 × T 373 mm",
+    cellH: 74,
+    dimensions: "B 2273 × H 740 × T 373 mm",
     price: 2190,
-    defaultColor: "graphitschwarz",
+    defaultColor: "usmgruen",
     wall: "mid",
     teaser:
-      "Vier Elemente flach über dem Boden — die souveränste Bühne für jedes Wohnzimmer.",
+      "Drei Elemente flach über dem Boden — die souveränste Bühne für jedes Wohnzimmer.",
     description:
-      "Das langgestreckte Lowboard trägt Fernseher, Verstärker und Plattenspieler, ohne sich in den Vordergrund zu spielen. Ein offenes Fach für Geräte mit Fernbedienung, drei Klapptüren für alles andere. Wie jedes unserer Möbel wird es komplett demontiert, aufbereitet und in Ihrer Wunschfarbe neu pulverbeschichtet.",
+      "Das langgestreckte Lowboard trägt Fernseher, Verstärker und Plattenspieler, ohne sich in den Vordergrund zu spielen. Ein offenes Fach für Geräte mit Fernbedienung, zwei Klapptüren für alles andere. Wie jedes unserer Möbel wird es komplett demontiert, aufbereitet und in Ihrer Wunschfarbe neu pulverbeschichtet.",
     details: [
       "Kabeldurchlässe auf Wunsch werkzeuglos nachrüstbar",
       "Offenes Gerätefach, IR-durchlässig",
@@ -81,25 +96,30 @@ export const PRODUCTS: Product[] = [
   {
     slug: "haller-highboard-l",
     name: "Haller Highboard L",
+    signature: "Rubin",
+    ort: "Fabriketage",
+    image: "/media/tile-rubin.jpg",
     category: "highboards",
     categoryLabel: "Highboard",
     grid: [
-      ["open", "open"],
+      ["flap", "flap"],
+      ["flap", "open"],
+      ["flap", "flap"],
       ["flap", "flap"],
       ["door", "door"],
     ],
     cellW: 150,
-    cellH: 96,
-    dimensions: "B 1523 × H 1110 × T 373 mm",
-    price: 2890,
+    cellH: 80,
+    dimensions: "B 1523 × H 1829 × T 373 mm",
+    price: 3490,
     defaultColor: "rubinrot",
     wall: "light",
     teaser:
-      "Stauraum in der Vertikalen: sechs Fächer auf drei Ebenen, halb offen, halb geschlossen.",
+      "Stauraum in der Vertikalen: zehn Fächer auf fünf Ebenen, ein offenes Schaufach.",
     description:
       "Das Highboard kombiniert offene Präsentationsfächer mit geschlossenen Ebenen — als Geschirrschrank, Barmöbel oder Aktenschrank gleichermaßen zuhause. Die Auszugstüren der untersten Reihe laufen nach der Aufbereitung wieder wie am ersten Tag.",
     details: [
-      "6 Fächer auf 3 Ebenen",
+      "10 Fächer auf 5 Ebenen",
       "Neubeschichtung aller Flächen in Wunschfarbe",
       "Alle Scharniere und Dämpfer erneuert",
       "Chromrohre und Kugeln poliert oder erneuert",
@@ -109,6 +129,9 @@ export const PRODUCTS: Product[] = [
   {
     slug: "haller-rollcontainer",
     name: "Haller Rollcontainer",
+    signature: "Gold",
+    ort: "Werkstatt",
+    image: "/media/tile-gold.jpg",
     category: "container",
     categoryLabel: "Container",
     grid: [
@@ -137,26 +160,28 @@ export const PRODUCTS: Product[] = [
   {
     slug: "haller-regal-atelier",
     name: "Haller Regal Atelier",
+    signature: "Kreide",
+    ort: "Atelier",
+    image: "/media/tile-kreide.jpg",
     category: "regale",
     categoryLabel: "Regal",
     grid: [
       ["open", "open"],
       ["open", "open"],
       ["open", "open"],
-      ["open", "open"],
     ],
     cellW: 150,
     cellH: 82,
-    dimensions: "B 1523 × H 1479 × T 373 mm",
-    price: 1990,
+    dimensions: "B 1523 × H 1110 × T 373 mm",
+    price: 1790,
     defaultColor: "reinweiss",
     wall: "warm",
     teaser:
-      "Acht offene Fächer für Bücher, Vasen und alles, was gesehen werden will.",
+      "Sechs offene Fächer für Bücher, Vasen und alles, was gesehen werden will.",
     description:
       "Das offene Regal ist die leichteste Konfiguration des Systems: keine Türen, keine Klappen, nur Struktur. Es lebt vom Rhythmus der verchromten Rohre und der Tiefe seiner Fächer — und davon, was Sie hineinstellen.",
     details: [
-      "8 offene Fächer",
+      "6 offene Fächer",
       "Neubeschichtung aller Flächen in Wunschfarbe",
       "Chromrohre und Kugeln poliert oder erneuert",
       "Zusätzliche Tablare nachrüstbar",
@@ -190,24 +215,27 @@ export const PRODUCTS: Product[] = [
   {
     slug: "haller-sideboard-xl",
     name: "Haller Sideboard XL",
+    signature: "Graphit",
+    ort: "Loft",
+    image: "/media/tile-graphit.jpg",
     category: "sideboards",
     categoryLabel: "Sideboard",
     grid: [
-      ["flap", "open", "open", "open", "flap"],
-      ["flap", "door", "door", "door", "flap"],
+      ["flap", "open", "open", "flap"],
+      ["door", "door", "door", "door"],
     ],
-    cellW: 130,
+    cellW: 140,
     cellH: 72,
-    dimensions: "B 3773 × H 740 × T 373 mm",
-    price: 3790,
-    defaultColor: "stahlblau",
+    dimensions: "B 3023 × H 740 × T 373 mm",
+    price: 3290,
+    defaultColor: "graphitschwarz",
     wall: "mid",
     teaser:
-      "Fünf Elemente Wandlänge: das Statement-Sideboard für große Räume.",
+      "Vier Elemente Wandlänge: das Statement-Sideboard für große Räume.",
     description:
-      "Zehn Fächer über fast vier Meter — für Esszimmer, Empfänge und Konferenzräume, die eine ruhige, präzise Linie brauchen. Die Kombination aus offenen Fächern, Klappen und Türen konfigurieren wir gemeinsam mit Ihnen; jede Anordnung ist möglich.",
+      "Acht Fächer über drei Meter — für Esszimmer, Empfänge und Konferenzräume, die eine ruhige, präzise Linie brauchen. Die Kombination aus offenen Fächern, Klappen und Türen konfigurieren wir gemeinsam mit Ihnen; jede Anordnung ist möglich.",
     details: [
-      "10 Fächer, Konfiguration nach Wunsch",
+      "8 Fächer, Konfiguration nach Wunsch",
       "Neubeschichtung aller Flächen in Wunschfarbe",
       "Chromrohre und Kugeln poliert oder erneuert",
       "Lieferung und Aufbau durch unser Team",
