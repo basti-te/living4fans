@@ -518,10 +518,17 @@ button {
   max-width: 60ch;
 }
 
+.hero-still {
+  display: none;
+}
+
 @media (max-width: 760px) {
-  .hero-media video,
-  .hero-media img {
-    object-position: 71% 50%;
+  .hero-media .hero-video {
+    display: none;
+  }
+  .hero-still {
+    display: block;
+    object-position: 66% 50%;
   }
   .hero-overlay {
     align-self: flex-end;
