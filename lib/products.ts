@@ -84,7 +84,7 @@ export const PRODUCTS: Product[] = [
     teaser:
       "Drei Elemente flach über dem Boden — die souveränste Bühne für jedes Wohnzimmer.",
     description:
-      "Das langgestreckte Lowboard trägt Fernseher, Verstärker und Plattenspieler, ohne sich in den Vordergrund zu spielen. Ein offenes Fach für Geräte mit Fernbedienung, zwei Klapptüren für alles andere. Wie jedes unserer Möbel wird es komplett demontiert, aufbereitet und in Ihrer Wunschfarbe neu pulverbeschichtet.",
+      "Das langgestreckte Lowboard trägt Fernseher, Verstärker und Plattenspieler, ohne sich in den Vordergrund zu spielen. Ein offenes Fach für Geräte mit Fernbedienung, zwei Klapptüren für alles andere. Wie jedes unserer Möbelstücke wird es komplett demontiert, aufbereitet und in Ihrer Wunschfarbe neu pulverbeschichtet.",
     details: [
       "Kabeldurchlässe auf Wunsch werkzeuglos nachrüstbar",
       "Offenes Gerätefach, IR-durchlässig",

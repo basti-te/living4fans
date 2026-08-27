@@ -15,10 +15,10 @@ export default function KontaktPage() {
         <div className="container">
           <span className="eyebrow">Kontakt</span>
           <h1 className="heading-display" style={{ maxWidth: "20ch" }}>
-            Sprechen wir über Ihr Möbel.
+            Sprechen wir über Ihr Möbelstück.
           </h1>
           <p className="body-copy mt-40">
-            Ob Anfrage zu einem Möbel aus dem Shop, Aufbereitung Ihres eigenen
+            Ob Anfrage zu einem Möbelstück aus dem Shop, Aufbereitung Ihres eigenen
             Stücks oder Ankauf — schreiben Sie uns. Wir melden uns in der
             Regel innerhalb eines Werktags.
           </p>

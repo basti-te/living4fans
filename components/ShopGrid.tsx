@@ -46,7 +46,7 @@ export default function ShopGrid() {
         </div>
         {filtered.length === 0 ? (
           <p className="body-copy">
-            In dieser Kategorie ist aktuell kein Möbel verfügbar. Fragen Sie
+            In dieser Kategorie ist aktuell kein Möbelstück verfügbar. Fragen Sie
             uns — wir finden das passende Stück für Sie.
           </p>
         ) : (

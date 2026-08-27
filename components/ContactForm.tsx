@@ -51,7 +51,7 @@ export default function ContactForm() {
           id="cf-message"
           value={message}
           onChange={(e) => setMessage(e.target.value)}
-          placeholder="Welches Möbel, welche Farbe, welche Frage?"
+          placeholder="Welches Möbelstück, welche Farbe, welche Frage?"
           required
         />
       </div>

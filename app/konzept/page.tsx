@@ -28,7 +28,7 @@ export default function KonzeptPage() {
         <div className="container">
           <div className="split">
             <Reveal>
-              <div className="split-label">Das System hinter dem Möbel</div>
+              <div className="split-label">Das System hinter dem Möbelstück</div>
             </Reveal>
             <Reveal delay={100}>
               <p className="body-copy">
@@ -39,10 +39,10 @@ export default function KonzeptPage() {
               </p>
               <p className="body-copy">
                 Das Besondere: Jedes Element lässt sich zerstörungsfrei
-                zerlegen, umbauen und neu beschichten. Ein USM Haller Möbel
-                ist damit das vielleicht nachhaltigste Möbel, das je gebaut
-                wurde — vorausgesetzt, jemand kümmert sich darum. Das ist
-                unsere Arbeit.
+                zerlegen, umbauen und neu beschichten. Ein USM Haller
+                Möbelstück ist damit das vielleicht nachhaltigste Möbelstück,
+                das je gebaut wurde — vorausgesetzt, jemand kümmert sich
+                darum. Das ist unsere Arbeit.
               </p>
             </Reveal>
           </div>
@@ -138,7 +138,7 @@ export default function KonzeptPage() {
             </Reveal>
             <Reveal delay={100}>
               <p className="body-copy">
-                Drei Gründe. Erstens: Nachhaltigkeit — ein aufbereitetes Möbel
+                Drei Gründe. Erstens: Nachhaltigkeit — ein aufbereitetes Möbelstück
                 spart den Großteil der Ressourcen, die eine Neuproduktion
                 benötigt. Zweitens: Verfügbarkeit — unsere Möbel sind in 4 bis
                 6 Wochen bei Ihnen, individuell beschichtet. Drittens: Die

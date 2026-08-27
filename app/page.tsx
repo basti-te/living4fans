@@ -1,6 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
+import ScrollSequence from "@/components/ScrollSequence";
 import ProductCard from "@/components/ProductCard";
 import { USM_COLORS } from "@/lib/colors";
 import { PRODUCTS } from "@/lib/products";
@@ -9,7 +10,7 @@ const PROCESS = [
   {
     num: "01",
     title: "Demontage",
-    text: "Jedes Möbel wird vollständig in seine Einzelteile zerlegt — Rohre, Kugeln, Tablare, bis zur letzten Schraube.",
+    text: "Jedes Möbelstück wird vollständig in seine Einzelteile zerlegt — Rohre, Kugeln, Tablare, bis zur letzten Schraube.",
     image: "/media/prozess-1.jpg",
     alt: "Demontierte Chromrohre und Verbindungskugeln auf der Werkbank",
   },
@@ -69,21 +70,15 @@ export default function Home() {
           <Reveal>
             <span className="eyebrow">Unser Versprechen</span>
             <h2 className="heading-display">
-              Jedes Möbel ein Original. Aufbereitet in Handarbeit. Neu
+              Jedes Möbelstück ein Original. Aufbereitet in Handarbeit. Neu
               beschichtet in Ihrer Wunschfarbe.
             </h2>
           </Reveal>
         </div>
       </section>
 
-      {/* Interlude I — volle Breite, ohne Text */}
-      <div className="interlude">
-        <img
-          src="/media/entry-interlude.jpg"
-          alt="Leere Orangerie mit Lichtbahnen auf dem Steinboden"
-          loading="lazy"
-        />
-      </div>
+      {/* Scroll-Sequenz: Aufbau eines Möbelstücks in der Orangerie */}
+      <ScrollSequence />
 
       {/* Die Signaturen */}
       <section className="section" style={{ paddingTop: 40 }}>
@@ -166,7 +161,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={120}>
               <p className="body-copy">
-                Ein USM Haller Möbel ist auf Jahrzehnte gebaut. Das verchromte
+                Ein USM Haller Möbelstück ist auf Jahrzehnte gebaut. Das verchromte
                 Stahlrohrgestell überdauert Moden, Umzüge und Generationen —
                 nur die Oberflächen tragen die Spuren der Zeit. Genau dort
                 setzen wir an: Statt neu zu produzieren, geben wir originalen
@@ -194,6 +189,7 @@ export default function Home() {
           src="/media/interlude-tanne.jpg"
           alt="Tannengrünes USM Haller Sideboard in einer verlassenen Galerie"
           loading="lazy"
+          className="focus-right"
         />
       </div>
 
@@ -292,9 +288,9 @@ export default function Home() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <span className="eyebrow">Ihr Möbel, Ihre Farbe</span>
+            <span className="eyebrow">Ihr Möbelstück, Ihre Farbe</span>
             <h2 className="heading-display" style={{ maxWidth: "22ch" }}>
-              Sie haben ein USM Haller Möbel — oder wünschen sich eines?
+              Sie haben ein USM Haller Möbelstück — oder wünschen sich eines?
             </h2>
             <p className="body-copy mt-40">
               Wir kaufen gebrauchte Möbel an, bereiten Ihr eigenes Stück in

@@ -13,7 +13,7 @@ export default function ProductConfigurator({ product }: { product: Product }) {
     `Anfrage: ${product.name} in ${color.name}`
   );
   const mailBody = encodeURIComponent(
-    `Guten Tag,\n\nich interessiere mich für folgendes Möbel:\n\n` +
+    `Guten Tag,\n\nich interessiere mich für folgendes Möbelstück:\n\n` +
       `Modell: ${product.name}\nMaße: ${product.dimensions}\n` +
       `Wunschfarbe: ${color.name} (${color.ral})\nPreis: ${formatPrice(product.price)}\n\n` +
       `Bitte senden Sie mir ein Angebot.\n\nMit freundlichen Grüßen`

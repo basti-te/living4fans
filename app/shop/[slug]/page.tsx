@@ -54,7 +54,7 @@ export default async function ProductPage({
         <div className="container">
           <div className="split">
             <Reveal>
-              <div className="split-label">Was wir an diesem Möbel machen</div>
+              <div className="split-label">Was wir an diesem Möbelstück machen</div>
             </Reveal>
             <Reveal delay={100}>
               <ul className="detail-list">

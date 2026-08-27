@@ -170,7 +170,7 @@ export default function FurnitureSvg({
       viewBox={`0 0 ${width} ${height}`}
       className={className}
       role="img"
-      aria-label="Illustration eines USM Haller Möbels"
+      aria-label="Illustration eines USM Haller Möbelstücks"
       style={{ display: "block" }}
     >
       {panels}
