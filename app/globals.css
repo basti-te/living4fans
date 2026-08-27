@@ -526,7 +526,7 @@ button {
   .hero-media .hero-video {
     display: none;
   }
-  .hero-still {
+  .hero-media .hero-still {
     display: block;
     object-position: 84% 50%;
   }
