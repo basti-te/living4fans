@@ -45,8 +45,19 @@ const CATEGORY_LINKS = [
   { label: "Beistelltische", href: "/shop?kategorie=tische" },
 ];
 
+const HOME_SIGNATURES = [
+  "haller-sideboard-m",
+  "haller-lowboard-tv",
+  "haller-highboard-l",
+  "haller-rollcontainer",
+  "haller-sideboard-xl",
+  "haller-regal-atelier",
+];
+
 export default function Home() {
-  const signatures = PRODUCTS.filter((p) => p.signature);
+  const signatures = HOME_SIGNATURES.map(
+    (slug) => PRODUCTS.find((p) => p.slug === slug)!
+  );
 
   return (
     <>
@@ -67,31 +78,12 @@ export default function Home() {
 
       <hr className="hairline" />
 
-      {/* Kategorien als Schriftwand */}
-      <section className="section">
-        <div className="container">
-          <Reveal>
-            <span className="eyebrow">Das Sortiment</span>
-            <p className="category-wall">
-              {CATEGORY_LINKS.map((c, i) => (
-                <span key={c.href}>
-                  <Link href={c.href}>{c.label}</Link>
-                  {i < CATEGORY_LINKS.length - 1 ? ", " : " — "}
-                </span>
-              ))}
-              <span className="meta">
-                aufbereitet und beschichtet in Ihrer Farbe.
-              </span>
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <hr className="hairline" />
-
       {/* Die Signaturen */}
-      <section className="section">
-        <div className="container">
+      <section className="section" style={{ paddingTop: 40 }}>
+        <div className="display-deco-wrap" aria-hidden="true">
+          <div className="display-deco">Signaturen</div>
+        </div>
+        <div className="container" style={{ marginTop: 56 }}>
           <Reveal>
             <div
               style={{
@@ -116,7 +108,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={80}>
             <p className="body-copy mb-68">
-              Sechs Farben, sechs Räume: Unsere Signaturen zeigen, was
+              Ein Licht, sechs Räume: Unsere Signaturen zeigen, was
               Pulverbeschichtung kann, wenn man sie ernst nimmt. Jedes Stück
               ist ein aufbereitetes Original — und jede Signatur in jeder
               Konfiguration bestellbar.
@@ -129,6 +121,28 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      <hr className="hairline" />
+
+      {/* Kategorien als Schriftwand */}
+      <section className="section">
+        <div className="container">
+          <Reveal>
+            <span className="eyebrow">Das Sortiment</span>
+            <p className="category-wall">
+              {CATEGORY_LINKS.map((c, i) => (
+                <span key={c.href}>
+                  <Link href={c.href}>{c.label}</Link>
+                  {i < CATEGORY_LINKS.length - 1 ? ", " : " — "}
+                </span>
+              ))}
+              <span className="meta">
+                aufbereitet und beschichtet in Ihrer Farbe.
+              </span>
+            </p>
+          </Reveal>
         </div>
       </section>
 
@@ -177,12 +191,15 @@ export default function Home() {
       </div>
 
       {/* Prozess */}
-      <section className="section">
-        <div className="container">
+      <section className="section" style={{ paddingTop: 40 }}>
+        <div className="display-deco-wrap" aria-hidden="true">
+          <div className="display-deco">Neuauflage</div>
+        </div>
+        <div className="container" style={{ marginTop: 56 }}>
           <Reveal>
             <span className="eyebrow">Die Neuauflage</span>
             <h2 className="heading-display mb-68" style={{ maxWidth: "18ch" }}>
-              Vier Schritte zur Neuauflage
+              Vier Schritte, ein Versprechen
             </h2>
           </Reveal>
           <div className="process-grid">
@@ -207,8 +224,11 @@ export default function Home() {
       <hr className="hairline" />
 
       {/* Farben */}
-      <section className="section" id="farben">
-        <div className="container">
+      <section className="section" id="farben" style={{ paddingTop: 40 }}>
+        <div className="display-deco-wrap" aria-hidden="true">
+          <div className="display-deco">Wunschfarbe</div>
+        </div>
+        <div className="container" style={{ marginTop: 56 }}>
           <Reveal>
             <span className="eyebrow">Ihre Wunschfarbe</span>
             <h2 className="heading-display" style={{ maxWidth: "20ch" }}>

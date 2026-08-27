@@ -191,6 +191,9 @@ export const PRODUCTS: Product[] = [
   {
     slug: "haller-beistelltisch",
     name: "Haller Beistelltisch",
+    signature: "Sand",
+    ort: "Wintergarten",
+    image: "/media/tile-sand.jpg",
     category: "tische",
     categoryLabel: "Beistelltisch",
     grid: [["open"]],
@@ -198,7 +201,7 @@ export const PRODUCTS: Product[] = [
     cellH: 110,
     dimensions: "B 523 × H 568 × T 418 mm",
     price: 490,
-    defaultColor: "usmgruen",
+    defaultColor: "beige",
     wall: "light",
     teaser:
       "Ein einzelnes Element, unendlich einsetzbar — als Nachttisch, Telefontisch, Podest.",
@@ -245,6 +248,9 @@ export const PRODUCTS: Product[] = [
   {
     slug: "haller-highboard-vitrine",
     name: "Haller Highboard S",
+    signature: "Stahl",
+    ort: "Maschinenhalle",
+    image: "/media/tile-stahl.jpg",
     category: "highboards",
     categoryLabel: "Highboard",
     grid: [
@@ -256,7 +262,7 @@ export const PRODUCTS: Product[] = [
     cellH: 96,
     dimensions: "B 773 × H 1110 × T 373 mm",
     price: 1590,
-    defaultColor: "beige",
+    defaultColor: "stahlblau",
     wall: "warm",
     teaser:
       "Die schmale Säule: drei Ebenen Stauraum auf kleinstem Grundriss.",

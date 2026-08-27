@@ -16,15 +16,16 @@ export default function Hero() {
       </div>
       <div className="hero-overlay">
         <div className="hero-title-block">
-          <span className="eyebrow">
-            Aufbereitet &amp; neu pulverbeschichtet
-          </span>
-          <h1 className="display-hero hero-title">USM Haller</h1>
-        </div>
-        <div className="hero-caption">
-          Signatur Enzian — Enzianblau RAL 5010
-          <br />
-          Aufgenommen in der Orangerie
+          <span className="eyebrow">Living4Fans — Signatur Enzian</span>
+          <h1 className="display-hero hero-title">
+            USM
+            <br />
+            Haller
+          </h1>
+          <p className="hero-claim">
+            Aufbereitete Originale, neu pulverbeschichtet in Ihrer
+            RAL&#8209;Wunschfarbe.
+          </p>
         </div>
       </div>
     </section>

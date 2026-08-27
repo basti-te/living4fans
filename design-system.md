@@ -29,15 +29,19 @@ mit bloßem Auge prüfbar.
 - Labels/Eyebrows: 10-12px, Versalien, letter-spacing +0.083em bis +0.1em.
 - Fließtext: 17-20px, Zeilenhöhe 1.5, Farbe Umbra, max. ~52ch.
 - Keine Zwischengrößen 24-36px. Die Lücke zwischen 20 und 40px bleibt leer.
-- Pro Scroll-Abschnitt der Startseite existiert mindestens ein Display-Wort;
-  Typografie ist das einzige Dekorationselement des Interfaces.
+- Deko-Display-Ebene: Jede Hauptsektion der Startseite öffnet mit einem
+  einzelnen monumentalen Versal-Wort >=150px (Desktop), das links angeschnitten
+  über die volle Breite läuft. Typografie ist das einzige Dekorationselement
+  des Interfaces.
 
 ## 3. Linien, Formen, Buttons
 
 - Trennung ausschließlich durch 1px-Hairlines in Kohle. Nav und Footer sind
   in Hairline-Zellen segmentiert.
-- Radius 0 auf allem außer Pills (9999px). Bilder und Kacheln immer eckig.
-- Buttons: (a) Pill mit 1px-Rand, Versalien-Label, Hover = Invertierung;
+- Radius 0 auf allem. Bilder, Kacheln und Buttons immer eckig.
+- Buttons: (a) Eckpunkt-Rechteck — 1px-Rand, vier kleine Kohle-Punkte in den
+  Ecken, Versalien-Label; Hover = Invertierung (Kohle-Füllung, Gips-Text);
+  aktive Filter erhalten doppelte Innenlinie, nie eine Dauer-Füllung;
   (b) gefüllter eckiger Kohle-Button, max. einer pro Viewport.
 - Keine Icons als Dekoration; nur funktionale Icons (max. 20px, 1px Strich).
 
@@ -50,14 +54,16 @@ Jedes Produkt-/Kampagnenbild folgt diesen prüfbaren Regeln:
 2. Umgebungen sind historisch oder industriell: Orangerie/Wintergarten,
    Lost-Place-Galerie, Fabriketage/Loft, Betonhalle, Altbau mit Stuck.
    Nie: weißes Studio, Wohnkatalog-Deko, Neubau.
-3. Licht: eine erkennbare gerichtete Lichtquelle (Fensterlicht), eine klare
-   Schattenkante. Gleiche warme, leicht entsättigte Gradierung über alle
-   Bilder einer Seite.
+3. Licht: EIN Lichtsystem über die ganze Seite — Fensterlicht von links,
+   eine klare Schattenkante nach rechts, gleiche warme, leicht entsättigte
+   Gradierung über alle Bilder. Die Räume wechseln, das Licht nie.
 4. Kamera auf Möbelhöhe, Möbel frontal oder leicht gedreht, frei stehend,
    Boden sichtbar. Keine Menschen, keine Logos, keine Requisiten-Flut
    (max. 2-3 stille Objekte).
 5. Auf dem Bild liegt niemals UI: kein Text, kein Badge, kein Preis, kein
-   Verlauf. Ausnahme: Hero-Displaytitel und Thumbnail-Leiste im Hero.
+   Verlauf. Einzige Ausnahme ist der Hero: dort dürfen Eyebrow, Displaytitel
+   und eine Claim-Zeile stehen — gebündelt in der linken Bildhälfte über
+   ruhigem Bildgrund, nie über dem Möbel.
 6. Produktnamen stehen in Versalien UNTER der Kachel, mit Preis rechts.
 
 ## 5. Signatur-Farbkarte (Content, nicht UI)
@@ -66,12 +72,14 @@ Kuratiertes Pairing — jede Signaturfarbe hat ihren Ort:
 
 | Signatur | Farbe (Panel) | Ort |
 |---|---|---|
-| ENZIAN | Enzianblau RAL 5010 | Orangerie / Wintergarten |
-| TANNE | USM Grün | Lost-Place-Galerie |
-| RUBIN | Rubinrot | Fabriketage, rohes Ziegelwerk |
-| GOLD | Goldgelb RAL 1004 | Betonhalle / Werkstatt |
-| GRAPHIT | Graphitschwarz | Penthouse-Loft, Abendlicht |
-| KREIDE | Reinweiß RAL 9010 | Altbau-Atelier mit Stuck |
+| ENZIAN | Enzianblau RAL 5010 | Orangerie |
+| TANNE | USM Grün | Galerie |
+| RUBIN | Rubinrot | Fabriketage |
+| GOLD | Goldgelb RAL 1004 | Werkstatt |
+| GRAPHIT | Graphitschwarz | Loft |
+| KREIDE | Reinweiß RAL 9010 | Atelier |
+| SAND | Beige USM 13 | Wintergarten |
+| STAHL | Stahlblau USM 39 | Maschinenhalle |
 
 ## 6. Motion
 
@@ -84,6 +92,8 @@ Kuratiertes Pairing — jede Signaturfarbe hat ihren Ort:
 
 ## 7. Verbote
 
-- Kein Schatten, kein Verlauf, keine Rundung außer Pills, keine zweite
-  Flächenfarbe, keine Akzentfarbe im UI, kein Text auf Fotografien
-  (außer Hero), keine Menschen in Produktbildern, kein weißes Studio.
+- Kein Schatten, kein Verlauf, keine Rundungen, keine zweite Flächenfarbe,
+  keine Akzentfarbe im UI, kein Text auf Fotografien (außer Hero-Block),
+  keine Menschen in Produktbildern, kein weißes Studio, kein glühendes
+  Werkstatt-Pathos: Prozessbilder zeigen realistische Betriebsgrößen und
+  physikalisch glaubwürdige Zustände.
