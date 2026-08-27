@@ -534,6 +534,10 @@ button {
     align-self: flex-end;
     padding-bottom: 28px;
   }
+  .hero-title,
+  .hero-title-block .eyebrow {
+    color: var(--linen);
+  }
   .hero-title {
     font-size: 46px;
   }
