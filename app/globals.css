@@ -528,7 +528,7 @@ button {
   }
   .hero-still {
     display: block;
-    object-position: 66% 50%;
+    object-position: 84% 50%;
   }
   .hero-overlay {
     align-self: flex-end;
