@@ -363,7 +363,7 @@ button {
   z-index: 2;
   align-self: center;
   width: 100%;
-  padding: 0 var(--page-pad);
+  padding: 0 var(--page-pad) 16vh;
   color: var(--walnut);
 }
 
@@ -389,7 +389,7 @@ button {
   font-size: 17px;
   font-weight: 700;
   line-height: 1.4;
-  color: var(--linen);
+  color: var(--walnut);
   white-space: nowrap;
   animation: rise 1s 0.26s var(--ease-out) both;
 }
