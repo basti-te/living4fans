@@ -210,7 +210,7 @@ button {
 }
 
 .pill.is-active {
-  box-shadow: inset 0 0 0 1px var(--walnut);
+  box-shadow: inset 0 0 0 2px var(--linen), inset 0 0 0 3px var(--walnut);
   font-weight: 700;
 }
 
@@ -386,11 +386,19 @@ button {
 
 .hero-claim {
   margin-top: 20px;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: 700;
   line-height: 1.4;
-  max-width: 28ch;
+  color: var(--linen);
+  white-space: nowrap;
   animation: rise 1s 0.26s var(--ease-out) both;
+}
+
+@media (max-width: 760px) {
+  .hero-claim {
+    white-space: normal;
+    max-width: 26ch;
+  }
 }
 
 @media (max-width: 860px) {

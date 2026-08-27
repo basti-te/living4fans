@@ -23,8 +23,7 @@ export default function Hero() {
             Haller
           </h1>
           <p className="hero-claim">
-            Aufbereitete Originale, neu pulverbeschichtet in Ihrer
-            RAL&#8209;Wunschfarbe.
+            Aufbereitete Originale — neu beschichtet in Ihrer RAL-Wunschfarbe.
           </p>
         </div>
       </div>
