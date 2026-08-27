@@ -532,7 +532,14 @@ button {
   }
   .hero-overlay {
     align-self: flex-end;
-    padding-bottom: 44px;
+    padding-bottom: 28px;
+  }
+  .hero-title {
+    font-size: 46px;
+  }
+  .hero-claim {
+    font-size: 15px;
+    margin-top: 12px;
   }
   .interlude img.focus-right {
     object-position: 76% 50%;
