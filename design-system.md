@@ -59,7 +59,9 @@ Jedes Produkt-/Kampagnenbild folgt diesen prüfbaren Regeln:
 3. Licht: EIN Lichtsystem über die ganze Seite — Fensterlicht von links,
    eine klare Schattenkante nach rechts, gleiche warme, leicht entsättigte
    Gradierung über alle Bilder. Die Räume wechseln, das Licht nie.
-4. Kamera auf Möbelhöhe, Möbel frontal oder leicht gedreht, frei stehend,
+4. Kamera auf Augenhöhe des Möbelstücks (bei niedrigen Stücken wie
+   Beistelltischen und Containern ist ein leicht erhöhter Standpunkt
+   zulässig), Möbel frontal oder leicht gedreht, frei stehend,
    Boden sichtbar. Keine Menschen, keine Logos, keine Requisiten-Flut auf
    der Bühne (max. 2-3 stille Objekte im Raum). Inhalte IN den Fächern des
    Möbelstücks (Bücher, Keramik) zählen nicht als Bühnen-Requisiten — sie
