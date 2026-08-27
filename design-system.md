@@ -77,9 +77,9 @@ Kuratiertes Pairing — jede Signaturfarbe hat ihren Ort:
 | ENZIAN | Enzianblau RAL 5010 | Orangerie |
 | TANNE | USM Grün | Galerie |
 | RUBIN | Rubinrot | Fabriketage |
-| GOLD | Goldgelb RAL 1004 | Werkstatt |
+| GOLD | Goldgelb RAL 1004 | Atelier |
 | GRAPHIT | Graphitschwarz | Loft |
-| KREIDE | Reinweiß RAL 9010 | Atelier |
+| KREIDE | Reinweiß RAL 9010 | Altbau |
 | SAND | Beige USM 13 | Wintergarten |
 | STAHL | Stahlblau USM 39 | Maschinenhalle |
 
