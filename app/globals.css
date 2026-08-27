@@ -331,13 +331,13 @@ button {
 }
 
 .display-deco {
-  font-size: clamp(96px, 15vw, 220px);
+  font-size: clamp(110px, 16.5vw, 240px);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: -0.056em;
   line-height: 0.86;
   white-space: nowrap;
-  margin-left: -0.04em;
+  margin-left: -0.38em;
   margin-bottom: -0.06em;
   color: var(--walnut);
 }
@@ -379,8 +379,8 @@ button {
 }
 
 .hero-title {
-  font-size: clamp(56px, 8.6vw, 132px);
-  line-height: 0.95;
+  font-size: clamp(58px, 11.5vw, 175px);
+  line-height: 0.92;
   animation: rise 1s 0.12s var(--ease-out) both;
 }
 
@@ -509,22 +509,22 @@ button {
 }
 
 .process-step-num {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.04em;
   margin: 16px 0 6px;
 }
 
 .process-step-title {
-  font-size: 19px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.09em;
   margin-bottom: 8px;
 }
 
 .process-step-text {
-  font-size: 15px;
+  font-size: 17px;
   color: var(--charcoal);
   line-height: 1.55;
 }
@@ -664,6 +664,20 @@ button {
   text-transform: uppercase;
   letter-spacing: var(--track-caption);
   color: var(--slate);
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.product-card-cta {
+  color: var(--walnut);
+  font-weight: 500;
+  white-space: nowrap;
+  transition: opacity 0.2s;
+}
+
+.product-card:hover .product-card-cta {
+  opacity: 0.55;
 }
 
 /* ——— Editorial Split ——— */

@@ -41,7 +41,10 @@ export default function ProductCard({ product }: { product: Product }) {
           </span>
           <span className="tabular">{formatPrice(product.price)}</span>
         </div>
-        <div className="product-card-meta">{meta}</div>
+        <div className="product-card-meta">
+          <span>{meta}</span>
+          <span className="product-card-cta">Ansehen →</span>
+        </div>
       </div>
     </Link>
   );

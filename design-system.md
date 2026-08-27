@@ -26,6 +26,8 @@ mit bloßem Auge prüfbar.
 - Eine Schriftfamilie: Archivo (400/500/700). Keine zweite Familie.
 - Display-Ebene: >=150px Desktop (clamp bis ~52px mobil), Versalien,
   letter-spacing -0.045em bis -0.056em, Gewicht 400-500.
+- Headline-Ebene: 40-72px für Sektions-Überschriften, Versalien oder
+  Satzschrift, Gewicht 500-700.
 - Labels/Eyebrows: 10-12px, Versalien, letter-spacing +0.083em bis +0.1em.
 - Fließtext: 17-20px, Zeilenhöhe 1.5, Farbe Umbra, max. ~52ch.
 - Keine Zwischengrößen 24-36px. Die Lücke zwischen 20 und 40px bleibt leer.

@@ -76,7 +76,14 @@ export default function Home() {
         </div>
       </section>
 
-      <hr className="hairline" />
+      {/* Interlude I — volle Breite, ohne Text */}
+      <div className="interlude">
+        <img
+          src="/media/entry-interlude.jpg"
+          alt="Leere Orangerie mit Lichtbahnen auf dem Steinboden"
+          loading="lazy"
+        />
+      </div>
 
       {/* Die Signaturen */}
       <section className="section" style={{ paddingTop: 40 }}>
@@ -108,7 +115,7 @@ export default function Home() {
           </Reveal>
           <Reveal delay={80}>
             <p className="body-copy mb-68">
-              Ein Licht, sechs Räume: Unsere Signaturen zeigen, was
+              Ein Licht, acht Orte: Unsere Signaturen zeigen, was
               Pulverbeschichtung kann, wenn man sie ernst nimmt. Jedes Stück
               ist ein aufbereitetes Original — und jede Signatur in jeder
               Konfiguration bestellbar.
