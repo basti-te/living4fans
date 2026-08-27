@@ -361,9 +361,9 @@ button {
 .hero-overlay {
   position: relative;
   z-index: 2;
-  align-self: flex-end;
+  align-self: center;
   width: 100%;
-  padding: 0 var(--page-pad) 44px;
+  padding: 0 var(--page-pad);
   color: var(--walnut);
 }
 
@@ -385,11 +385,11 @@ button {
 }
 
 .hero-claim {
-  margin-top: 18px;
-  font-size: 18px;
-  font-weight: 500;
+  margin-top: 20px;
+  font-size: 19px;
+  font-weight: 700;
   line-height: 1.4;
-  max-width: 30ch;
+  max-width: 28ch;
   animation: rise 1s 0.26s var(--ease-out) both;
 }
 
