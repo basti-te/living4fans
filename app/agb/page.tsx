@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "AGB",
-  robots: { index: false },
+  description:
+    "Allgemeine Geschäftsbedingungen mit Kundeninformationen von Living4Fans — Verkauf aufbereiteter USM Haller Möbelstücke.",
 };
 
 export default function AgbPage() {
@@ -27,11 +28,11 @@ export default function AgbPage() {
             Alesja Schonhöft (nachfolgend Verkäufer) gelten für alle Verträge
             über die Lieferung von Waren, die ein Verbraucher oder Unternehmer
             (nachfolgend Kunde) mit dem Verkäufer hinsichtlich der vom
-            Verkäufer in dem Online-Portal &bdquo;Kleinanzeigen&ldquo;
-            präsentierten Artikel unter Verwendung von
-            Fernkommunikationsmitteln (z.B. Telefon oder E-Mail) ausschließlich
-            durch individuelle Kommunikation im Sinne des § 312j Abs. 5 Satz 1
-            BGB abschließt. Hiermit wird der Einbeziehung von eigenen
+            Verkäufer auf dieser Website oder in dem Online-Portal
+            &bdquo;Kleinanzeigen&ldquo; präsentierten Artikel unter Verwendung
+            von Fernkommunikationsmitteln (z.B. Telefon oder E-Mail)
+            ausschließlich durch individuelle Kommunikation im Sinne des
+            § 312j Abs. 5 Satz 1 BGB abschließt. Hiermit wird der Einbeziehung von eigenen
             Bedingungen des Kunden widersprochen, es sei denn, es ist etwas
             anderes vereinbart.
           </p>
@@ -53,7 +54,8 @@ export default function AgbPage() {
             <strong>2. Vertragsschluss</strong>
           </p>
           <p style={{ marginTop: "0.6em" }}>
-            2.1 Der Kunde kann per Telefon, per E-Mail oder über die Funktion
+            2.1 Der Kunde kann per Telefon, per E-Mail, über das
+            Kontaktformular auf dieser Website oder über die Funktion
             &bdquo;Nachricht schreiben&ldquo; auf &bdquo;Kleinanzeigen&ldquo;
             eine unverbindliche Anfrage auf Abgabe eines Angebots an den
             Verkäufer richten. Der Verkäufer lässt dem Kunden auf dessen
@@ -64,11 +66,12 @@ export default function AgbPage() {
           </p>
           <p style={{ marginTop: "0.6em" }}>
             2.2 Dieses Angebot kann der Kunde durch eine gegenüber dem
-            Verkäufer abzugebende Annahmeerklärung per E-Mail oder über die
-            Funktion &bdquo;Nachricht schreiben&ldquo; auf
-            &bdquo;Kleinanzeigen&ldquo; oder durch fernmündliche Zusage oder
-            durch Zahlung des vom Verkäufer angebotenen Kaufpreises jeweils
-            innerhalb von 7 (sieben) Tagen ab Zugang des Angebots annehmen,
+            Verkäufer abzugebende Annahmeerklärung per E-Mail, über das
+            Kontaktformular auf dieser Website oder über die Funktion
+            &bdquo;Nachricht schreiben&ldquo; auf &bdquo;Kleinanzeigen&ldquo;
+            oder durch fernmündliche Zusage oder durch Zahlung des vom
+            Verkäufer angebotenen Kaufpreises jeweils innerhalb von 7 (sieben)
+            Tagen ab Zugang des Angebots annehmen,
             wobei für die Berechnung der Frist der Tag des Angebotszugangs
             mitgerechnet wird. Für die Annahme durch Zahlung ist der Tag des
             Zahlungseingangs beim Verkäufer maßgeblich. Fällt der letzte Tag

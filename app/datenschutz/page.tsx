@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Datenschutz",
-  robots: { index: false },
+  description:
+    "Informationen zum Datenschutz bei Living4Fans — Umgang mit personenbezogenen Daten gemäß DSGVO.",
 };
 
 export default function DatenschutzPage() {

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Impressum",
-  robots: { index: false },
+  description:
+    "Impressum von Living4Fans — Alesja Schonhöft, Steinfeld. Aufbereitung und Verkauf originaler USM Haller Möbelstücke.",
 };
 
 export default function ImpressumPage() {

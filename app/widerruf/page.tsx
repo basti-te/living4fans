@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Widerrufsbelehrung",
-  robots: { index: false },
+  description:
+    "Widerrufsbelehrung und Muster-Widerrufsformular von Living4Fans — Ihre Rechte beim Kauf aufbereiteter USM Haller Möbelstücke.",
 };
 
 const formLine = {
