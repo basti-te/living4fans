@@ -106,7 +106,7 @@ export default function ProductConfigurator({ product }: { product: Product }) {
 
         <div className="pdp-actions">
           <a
-            href={`mailto:info@living4fans.de?subject=${mailSubject}&body=${mailBody}`}
+            href={`mailto:living4fans@web.de?subject=${mailSubject}&body=${mailBody}`}
             className="btn-filled"
           >
             Unverbindlich anfragen

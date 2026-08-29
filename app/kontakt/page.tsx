@@ -40,8 +40,16 @@ export default function KontaktPage() {
                     <span className="label meta" style={{ display: "block", marginBottom: 4 }}>
                       E-Mail
                     </span>
-                    <a href="mailto:info@living4fans.de" style={{ fontSize: 19 }}>
-                      info@living4fans.de
+                    <a href="mailto:living4fans@web.de" style={{ fontSize: 19 }}>
+                      living4fans@web.de
+                    </a>
+                  </div>
+                  <div>
+                    <span className="label meta" style={{ display: "block", marginBottom: 4 }}>
+                      Telefon &amp; WhatsApp
+                    </span>
+                    <a href="tel:+491788319818" style={{ fontSize: 19 }}>
+                      0178 8319818
                     </a>
                   </div>
                   <div>

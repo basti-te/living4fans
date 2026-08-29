@@ -25,13 +25,16 @@ export default function SiteFooter() {
           </div>
           <div className="footer-col">
             <span className="label">Kontakt</span>
-            <a href="mailto:info@living4fans.de">info@living4fans.de</a>
+            <a href="mailto:living4fans@web.de">living4fans@web.de</a>
+            <a href="tel:+491788319818">0178 8319818</a>
             <Link href="/kontakt">Rückruf vereinbaren</Link>
           </div>
           <div className="footer-col">
             <span className="label">Rechtliches</span>
             <Link href="/impressum">Impressum</Link>
             <Link href="/datenschutz">Datenschutz</Link>
+            <Link href="/agb">AGB</Link>
+            <Link href="/widerruf">Widerrufsbelehrung</Link>
           </div>
         </div>
         <div className="footer-note">

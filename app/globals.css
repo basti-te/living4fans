@@ -331,13 +331,13 @@ button {
 }
 
 .display-deco {
-  font-size: clamp(58px, 11.5vw, 170px);
+  font-size: clamp(44px, 10vw, 150px);
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: -0.056em;
   line-height: 0.86;
   white-space: nowrap;
-  margin-left: -0.1em;
+  margin-left: 0;
   margin-bottom: -0.05em;
   color: var(--walnut);
 }

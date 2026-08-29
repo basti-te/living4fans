@@ -24,16 +24,17 @@ mit bloßem Auge prüfbar.
 ## 2. Typografie
 
 - Eine Schriftfamilie: Archivo (400/500/700). Keine zweite Familie.
-- Display-Ebene: >=150px Desktop (clamp bis ~52px mobil), Versalien,
-  letter-spacing -0.045em bis -0.056em, Gewicht 400-500.
+- Display-Ebene: >=140px auf großen Desktops (clamp bis ~44px mobil),
+  Versalien, letter-spacing -0.045em bis -0.056em, Gewicht 400-500.
 - Headline-Ebene: 40-72px für Sektions-Überschriften, Versalien oder
   Satzschrift, Gewicht 500-700.
 - Labels/Eyebrows: 10-12px, Versalien, letter-spacing +0.083em bis +0.1em.
 - Fließtext: 17-20px, Zeilenhöhe 1.5, Farbe Umbra, max. ~52ch.
 - Keine Zwischengrößen 24-36px. Die Lücke zwischen 20 und 40px bleibt leer.
 - Deko-Display-Ebene: Jede Hauptsektion der Startseite öffnet mit einem
-  einzelnen monumentalen Versal-Wort >=150px (Desktop), das links angeschnitten
-  über die volle Breite läuft. Typografie ist das einzige Dekorationselement
+  einzelnen monumentalen Versal-Wort >=140px (großer Desktop), das über die
+  volle Breite läuft und vollständig lesbar bleibt — kein seitlicher
+  Anschnitt (Kundenvorgabe). Typografie ist das einzige Dekorationselement
   des Interfaces.
 
 ## 3. Linien, Formen, Buttons

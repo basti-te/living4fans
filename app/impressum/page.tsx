@@ -16,21 +16,29 @@ export default function ImpressumPage() {
             <strong>Angaben gemäß § 5 DDG</strong>
           </p>
           <p style={{ marginTop: "1.2em" }}>
-            [Vor- und Nachname der Inhaberin / des Inhabers]
+            Firma Alesja Schonhöft — Living4Fans
             <br />
-            Living4Fans
+            Inhaberin: Alesja Schonhöft
             <br />
-            [Straße und Hausnummer]
+            Im Bülten 10
             <br />
-            [PLZ und Ort]
+            49439 Steinfeld
+            <br />
+            Deutschland
           </p>
           <p style={{ marginTop: "1.2em" }}>
-            E-Mail: info@living4fans.de
+            E-Mail:{" "}
+            <a
+              href="mailto:living4fans@web.de"
+              style={{ textDecoration: "underline" }}
+            >
+              living4fans@web.de
+            </a>
             <br />
-            Telefon: [Telefonnummer]
+            Telefon: <a href="tel:+491788319818">0178 8319818</a>
           </p>
           <p style={{ marginTop: "1.2em" }}>
-            Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [USt-IdNr.]
+            Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: DE430963026
           </p>
           <p style={{ marginTop: "1.2em" }}>
             Plattform der EU-Kommission zur Online-Streitbeilegung:{" "}
@@ -40,6 +48,10 @@ export default function ImpressumPage() {
             >
               ec.europa.eu/consumers/odr
             </a>
+            <br />
+            Zur Teilnahme an einem Streitbeilegungsverfahren vor einer
+            Verbraucherschlichtungsstelle sind wir weder verpflichtet noch
+            bereit.
           </p>
           <p style={{ marginTop: "1.2em" }}>
             Living4Fans ist ein unabhängiger Anbieter für aufbereitete

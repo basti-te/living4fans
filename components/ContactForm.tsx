@@ -13,7 +13,7 @@ export default function ContactForm() {
     const body = encodeURIComponent(
       `${message}\n\n—\n${name}\n${email}`
     );
-    window.location.href = `mailto:info@living4fans.de?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:living4fans@web.de?subject=${subject}&body=${body}`;
   };
 
   return (
