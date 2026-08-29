@@ -66,6 +66,8 @@ Jedes Produkt-/Kampagnenbild folgt diesen prüfbaren Regeln:
    der Bühne (max. 2-3 stille Objekte im Raum). Inhalte IN den Fächern des
    Möbelstücks (Bücher, Keramik) zählen nicht als Bühnen-Requisiten — sie
    zeigen Funktion, solange sie das Möbelstück nicht verdecken.
+   Ausnahme Scroll-Film: Im Demontage-/Montage-Film der Startseite dürfen
+   Monteure sichtbar sein — dort erzählen Menschen das Handwerk.
 5. Auf dem Bild liegt niemals UI: kein Text, kein Badge, kein Preis, kein
    Verlauf. Einzige Ausnahme ist der Hero: dort dürfen Eyebrow, Displaytitel
    und eine Claim-Zeile stehen — gebündelt in der linken Bildhälfte über

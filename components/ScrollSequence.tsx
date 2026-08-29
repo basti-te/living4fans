@@ -8,43 +8,44 @@ type Phase = {
   text: string;
 };
 
-const PHASES: Phase[] = [
+const BEATS: { label: string; text: string; frames: number }[] = [
   {
-    image: "/media/seq-1.jpg",
-    label: "Der Anfang",
-    text: "Ein leerer Raum, ein Plan: Hier entsteht ein Original.",
+    label: "Das Original",
+    text: "Ein aufbereitetes Möbelstück — doch wie kommt es dazu?",
+    frames: 1,
   },
   {
-    image: "/media/seq-2.jpg",
+    label: "Die Demontage",
+    text: "Unsere Monteure zerlegen das Möbelstück Tablar für Tablar.",
+    frames: 4,
+  },
+  {
     label: "Die Einzelteile",
-    text: "Rohre, Kugeln, Tablare — jedes Original beginnt vollständig zerlegt.",
+    text: "Rohre, Kugeln, Tablare — vollständig zerlegt, gereinigt und neu beschichtet.",
+    frames: 3,
   },
   {
-    image: "/media/seq-3.jpg",
-    label: "Das Gestell",
-    text: "Verchromte Rohre und Kugeln, poliert oder erneuert — das Skelett jedes USM Haller Möbelstücks.",
+    label: "Der Wiederaufbau",
+    text: "Frisch pulverbeschichtet wächst alles wieder zusammen.",
+    frames: 5,
   },
   {
-    image: "/media/seq-4.jpg",
-    label: "Die Beschichtung",
-    text: "Frisch pulverbeschichtete Tablare in Ihrer Wunschfarbe finden ihren Platz.",
-  },
-  {
-    image: "/media/seq-5.jpg",
-    label: "Die Beschichtung",
-    text: "Tablar für Tablar — die untere Reihe sitzt.",
-  },
-  {
-    image: "/media/seq-6.jpg",
-    label: "Die Montage",
-    text: "Die letzten Fächer wachsen zusammen, jede Verbindung wird geprüft.",
-  },
-  {
-    image: "/media/seq-7.jpg",
     label: "Das Original",
     text: "Fertig montiert und geprüft — bereit für sein zweites Leben.",
+    frames: 2,
   },
 ];
+
+const PHASES: Phase[] = BEATS.flatMap((beat, b) =>
+  Array.from({ length: beat.frames }, () => ({
+    image: "",
+    label: beat.label,
+    text: beat.text,
+  }))
+).map((p, i) => ({
+  ...p,
+  image: `/media/film-${String(i + 1).padStart(2, "0")}.jpg`,
+}));
 
 export default function ScrollSequence() {
   const wrapRef = useRef<HTMLDivElement>(null);
