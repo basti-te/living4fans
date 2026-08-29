@@ -94,7 +94,7 @@ export default function ScrollSequence() {
     <div
       ref={wrapRef}
       className="seq-wrap"
-      style={reduced ? undefined : { height: `${100 + PHASES.length * 15}vh` }}
+      style={reduced ? undefined : { height: `${100 + PHASES.length * 5}vh` }}
       aria-label="Die Aufbereitung eines USM Haller Möbelstücks, Schritt für Schritt"
     >
       <div className={reduced ? "seq-sticky seq-static" : "seq-sticky"}>
