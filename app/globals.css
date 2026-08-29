@@ -345,12 +345,18 @@ button {
 /* ——— Hero ——— */
 
 .hero {
-  position: relative;
-  height: calc(100svh - 65px);
-  min-height: 560px;
-  max-height: 1100px;
-  display: flex;
-  overflow: hidden;
+  background: var(--linen);
+}
+
+.hero-masthead {
+  padding: 52px var(--page-pad) 44px;
+  color: var(--walnut);
+}
+
+.hero-masthead .eyebrow {
+  letter-spacing: var(--track-label);
+  margin-bottom: 16px;
+  animation: rise 0.9s var(--ease-out) both;
 }
 
 .hero-media video,
@@ -358,34 +364,18 @@ button {
   object-position: 8% 50%;
 }
 
-.hero-overlay {
-  position: relative;
-  z-index: 2;
-  align-self: center;
-  width: 100%;
-  padding: 0 var(--page-pad) 16vh;
-  color: var(--walnut);
-}
-
-.hero-title-block {
-  max-width: 44%;
-  min-width: 320px;
-}
-
-.hero-title-block .eyebrow {
-  letter-spacing: var(--track-label);
-  margin-bottom: 12px;
-  animation: rise 0.9s var(--ease-out) both;
-}
-
 .hero-title {
-  font-size: clamp(58px, 11.5vw, 175px);
-  line-height: 0.92;
+  font-size: clamp(44px, 10vw, 150px);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: -0.056em;
+  line-height: 0.86;
+  white-space: nowrap;
   animation: rise 1s 0.12s var(--ease-out) both;
 }
 
 .hero-claim {
-  margin-top: 20px;
+  margin-top: 24px;
   font-size: 17px;
   font-weight: 700;
   line-height: 1.4;
@@ -394,17 +384,20 @@ button {
   animation: rise 1s 0.26s var(--ease-out) both;
 }
 
+.hero-claim-mobile {
+  display: none;
+}
+
 @media (max-width: 760px) {
   .hero-claim {
     white-space: normal;
     max-width: 26ch;
   }
-}
-
-@media (max-width: 860px) {
-  .hero-title-block {
-    max-width: 100%;
-    min-width: 0;
+  .hero-claim-desktop {
+    display: none;
+  }
+  .hero-claim-mobile {
+    display: block;
   }
 }
 
@@ -522,6 +515,9 @@ button {
 }
 
 @media (max-width: 760px) {
+  .hero-masthead {
+    padding: 36px var(--page-pad) 28px;
+  }
   .hero-media .hero-video {
     display: none;
   }
@@ -529,20 +525,9 @@ button {
     display: block;
     object-position: 84% 50%;
   }
-  .hero-overlay {
-    align-self: flex-end;
-    padding-bottom: 28px;
-  }
-  .hero-title,
-  .hero-title-block .eyebrow {
-    color: var(--linen);
-  }
-  .hero-title {
-    font-size: 46px;
-  }
   .hero-claim {
     font-size: 15px;
-    margin-top: 12px;
+    margin-top: 14px;
   }
   .interlude img.focus-right {
     object-position: 76% 50%;
@@ -550,8 +535,16 @@ button {
 }
 
 .hero-media {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  height: min(76svh, 860px);
+  min-height: 420px;
+}
+
+@media (max-width: 760px) {
+  .hero-media {
+    height: 58svh;
+    min-height: 340px;
+  }
 }
 
 .hero-media video,
@@ -1156,7 +1149,8 @@ button {
   .reveal,
   .hero-title,
   .hero-thumbs,
-  .hero-title-block .eyebrow {
+  .hero-claim,
+  .hero-masthead .eyebrow {
     animation: none !important;
     transition: none !important;
     opacity: 1;

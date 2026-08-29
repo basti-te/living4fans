@@ -17,9 +17,10 @@ mit bloßem Auge prüfbar.
   zweite Surface, keine Verläufe, keine Schatten im UI.
 - Keine chromatische Akzentfarbe im Interface. Sämtliche Farbigkeit kommt
   aus Fotografien/Videos (den Möbeln selbst).
-- Hero-/Interlude-Medien dürfen dunkel sein; Hero-Text steht in `Gips` auf
-  dunklem Bildgrund oder in `Kohle` auf hellem Bildgrund — nie mit Scrim
-  oder Verlauf unterlegt.
+- Hero-/Interlude-Medien dürfen dunkel sein. Der Hero-Textblock (Eyebrow,
+  Markentitel, Claim) steht in `Kohle` auf `Gips` OBERHALB des Mediums,
+  nie auf dem Bild — Lesbarkeit hat Vorrang (Kundenvorgabe). Kein Scrim,
+  kein Verlauf.
 
 ## 2. Typografie
 
@@ -70,9 +71,8 @@ Jedes Produkt-/Kampagnenbild folgt diesen prüfbaren Regeln:
    Ausnahme Scroll-Film: Im Demontage-/Montage-Film der Startseite dürfen
    Monteure sichtbar sein — dort erzählen Menschen das Handwerk.
 5. Auf dem Bild liegt niemals UI: kein Text, kein Badge, kein Preis, kein
-   Verlauf. Einzige Ausnahme ist der Hero: dort dürfen Eyebrow, Displaytitel
-   und eine Claim-Zeile stehen — gebündelt in der linken Bildhälfte über
-   ruhigem Bildgrund, nie über dem Möbel.
+   Verlauf — auch im Hero nicht. Der Hero-Textblock steht auf Gips oberhalb
+   des Mediums.
 6. Produktnamen stehen in Versalien UNTER der Kachel, mit Preis rechts.
 
 ## 5. Signatur-Farbkarte (Content, nicht UI)
@@ -102,7 +102,11 @@ Kuratiertes Pairing — jede Signaturfarbe hat ihren Ort:
 ## 7. Verbote
 
 - Kein Schatten, kein Verlauf, keine Rundungen, keine zweite Flächenfarbe,
-  keine Akzentfarbe im UI, kein Text auf Fotografien (außer Hero-Block),
+  keine Akzentfarbe im UI, kein Text auf Fotografien,
   keine Menschen in Produktbildern, kein weißes Studio, kein glühendes
   Werkstatt-Pathos: Prozessbilder zeigen realistische Betriebsgrößen und
   physikalisch glaubwürdige Zustände.
+- Markenrecht: „USM" / „USM Haller" niemals als Displaywort, Headline oder
+  prominenter Titel — die Bühne gehört der eigenen Marke Living4Fans.
+  „USM Haller" nur beschreibend in Fließtext, Claims, Labels und
+  Produktnamen (nominative Nutzung).

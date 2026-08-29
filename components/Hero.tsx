@@ -1,6 +1,20 @@
 export default function Hero() {
   return (
-    <section className="hero" aria-label="USM Haller Signatur Enzian in der Orangerie">
+    <section
+      className="hero"
+      aria-label="Living4Fans — aufbereitete USM Haller Klassiker, Signatur Enzian"
+    >
+      <div className="hero-masthead">
+        <span className="eyebrow">Signatur Enzian — Enzianblau RAL 5010</span>
+        <h1 className="hero-title">Living4Fans</h1>
+        <p className="hero-claim hero-claim-desktop">
+          Aufbereitete USM Haller Originale — neu pulverbeschichtet in Ihrer
+          RAL-Wunschfarbe.
+        </p>
+        <p className="hero-claim hero-claim-mobile">
+          Aufbereitete USM Haller Originale in Ihrer Wunschfarbe.
+        </p>
+      </div>
       <div className="hero-media">
         <video
           className="hero-video"
@@ -20,19 +34,6 @@ export default function Hero() {
           alt=""
           aria-hidden="true"
         />
-      </div>
-      <div className="hero-overlay">
-        <div className="hero-title-block">
-          <span className="eyebrow">Living4Fans — Signatur Enzian</span>
-          <h1 className="display-hero hero-title">
-            USM
-            <br />
-            Haller
-          </h1>
-          <p className="hero-claim">
-            Aufbereitete Originale — neu beschichtet in Ihrer RAL-Wunschfarbe.
-          </p>
-        </div>
       </div>
     </section>
   );
