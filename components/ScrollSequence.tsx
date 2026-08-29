@@ -16,16 +16,31 @@ const PHASES: Phase[] = [
   },
   {
     image: "/media/seq-2.jpg",
+    label: "Die Einzelteile",
+    text: "Rohre, Kugeln, Tablare — jedes Original beginnt vollständig zerlegt.",
+  },
+  {
+    image: "/media/seq-3.jpg",
     label: "Das Gestell",
     text: "Verchromte Rohre und Kugeln, poliert oder erneuert — das Skelett jedes USM Haller Möbelstücks.",
   },
   {
-    image: "/media/seq-3.jpg",
+    image: "/media/seq-4.jpg",
     label: "Die Beschichtung",
     text: "Frisch pulverbeschichtete Tablare in Ihrer Wunschfarbe finden ihren Platz.",
   },
   {
-    image: "/media/seq-4.jpg",
+    image: "/media/seq-5.jpg",
+    label: "Die Beschichtung",
+    text: "Tablar für Tablar — die untere Reihe sitzt.",
+  },
+  {
+    image: "/media/seq-6.jpg",
+    label: "Die Montage",
+    text: "Die letzten Fächer wachsen zusammen, jede Verbindung wird geprüft.",
+  },
+  {
+    image: "/media/seq-7.jpg",
     label: "Das Original",
     text: "Fertig montiert und geprüft — bereit für sein zweites Leben.",
   },
@@ -78,7 +93,7 @@ export default function ScrollSequence() {
     <div
       ref={wrapRef}
       className="seq-wrap"
-      style={reduced ? undefined : { height: `${100 + PHASES.length * 30}vh` }}
+      style={reduced ? undefined : { height: `${100 + PHASES.length * 15}vh` }}
       aria-label="Die Aufbereitung eines USM Haller Möbelstücks, Schritt für Schritt"
     >
       <div className={reduced ? "seq-sticky seq-static" : "seq-sticky"}>
