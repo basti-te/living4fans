@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
-import ScrollSequence from "@/components/ScrollSequence";
+import RoomTour from "@/components/RoomTour";
 import ProductCard from "@/components/ProductCard";
 import { USM_COLORS } from "@/lib/colors";
 import { PRODUCTS } from "@/lib/products";
@@ -77,8 +77,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Scroll-Sequenz: Aufbau eines Möbelstücks in der Orangerie */}
-      <ScrollSequence />
+      {/* Rundgang: vier Räume morphen ineinander */}
+      <RoomTour />
 
       {/* Die Signaturen */}
       <section className="section" style={{ paddingTop: 40 }}>

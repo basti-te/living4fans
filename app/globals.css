@@ -446,49 +446,39 @@ button {
   object-fit: cover;
 }
 
-/* ——— Scroll-Sequenz ——— */
+/* ——— Rundgang (Room-Tour-Video) ——— */
 
-.seq-wrap {
-  position: relative;
-}
-
-.seq-sticky {
-  position: sticky;
-  top: 0;
-  height: 100svh;
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
-}
-
-.seq-static {
-  position: static;
-  height: auto;
-}
-
-.seq-stage {
-  position: relative;
-  flex: 1;
-  min-height: 0;
-  background: #d8d2c4;
-}
-
-.seq-stage img {
-  position: absolute;
-  inset: 0;
+.roomtour-stage video,
+.roomtour-stage .roomtour-still {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: min(88svh, 900px);
+  min-height: 420px;
   object-fit: cover;
-  opacity: 0;
 }
 
-.seq-static .seq-stage {
-  min-height: 60svh;
+.roomtour-stage .roomtour-still {
+  display: none;
 }
 
-.seq-stage img.is-shown {
-  opacity: 1;
+@media (prefers-reduced-motion: reduce) {
+  .roomtour-stage video {
+    display: none;
+  }
+  .roomtour-stage .roomtour-still {
+    display: block;
+  }
 }
+
+@media (max-width: 760px) {
+  .roomtour-stage video,
+  .roomtour-stage .roomtour-still {
+    height: 60svh;
+    min-height: 320px;
+  }
+}
+
+/* ——— Caption-Leiste (Rundgang) ——— */
 
 .seq-caption {
   display: flex;

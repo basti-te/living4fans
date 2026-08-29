@@ -68,8 +68,6 @@ Jedes Produkt-/Kampagnenbild folgt diesen prüfbaren Regeln:
    der Bühne (max. 2-3 stille Objekte im Raum). Inhalte IN den Fächern des
    Möbelstücks (Bücher, Keramik) zählen nicht als Bühnen-Requisiten — sie
    zeigen Funktion, solange sie das Möbelstück nicht verdecken.
-   Ausnahme Scroll-Film: Im Demontage-/Montage-Film der Startseite dürfen
-   Monteure sichtbar sein — dort erzählen Menschen das Handwerk.
 5. Auf dem Bild liegt niemals UI: kein Text, kein Badge, kein Preis, kein
    Verlauf — auch im Hero nicht. Der Hero-Textblock steht auf Gips oberhalb
    des Mediums.
@@ -96,6 +94,9 @@ Kuratiertes Pairing — jede Signaturfarbe hat ihren Ort:
   Nichts animiert unter 400ms.
 - Videos: langsame, eindeutige Kamerabewegung in EINE Richtung (Dolly-in,
   Schwenk ODER Lichtwanderung). Keine Schnitte unter 4s, kein Zoom-Gewitter.
+  Ausnahme Rundgang-Loop der Startseite: dort morphen Räume schnitt-frei
+  ineinander (Match-Dissolve statt Schnitt, Ping-Pong-Loop) — schnelle
+  Verwandlung ist dort das Konzept.
 - Hintergrundvideos laufen stumm, autoplay, loop, ohne Controls.
 - `prefers-reduced-motion` deaktiviert alle Reveals und Autoplay-Videos.
 
