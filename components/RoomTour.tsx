@@ -26,9 +26,9 @@ export default function RoomTour() {
       <div className="seq-caption">
         <span className="label tabular">Rundgang</span>
         <p>
-          Vier Räume, eine Handschrift — vom Küchenblock bis zum Lowboard
-          verwandelt sich ein Raum in den nächsten. Jedes Möbelstück ein
-          aufbereitetes Original.
+          Sieben Räume, eine Handschrift — vom Küchenblock über Barwagen bis
+          zum Lowboard verwandelt sich ein Design in das nächste. Jedes
+          Möbelstück ein aufbereitetes Original.
         </p>
       </div>
     </section>
