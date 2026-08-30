@@ -6,8 +6,9 @@ import { createClient, type SupabaseClient } from "@supabase/supabase-js";
  * Projekts hier bzw. über Vercel-Env gesetzt. Solange leer, läuft der Shop im
  * statischen Fallback-Modus (lib/products.ts).
  */
-const FALLBACK_URL = "";
-const FALLBACK_ANON_KEY = "";
+const FALLBACK_URL = "https://yeobzgukligagxwogyqb.supabase.co";
+const FALLBACK_ANON_KEY =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inllb2J6Z3VrbGlnYWd4d29neXFiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODgxMDAxMTMsImV4cCI6MjEwMzY3NjExM30.boz79mTp5E0IwfsOzziawSGdGcBAE8WvFIWmtGJ8MTU";
 
 export const SUPABASE_URL =
   process.env.NEXT_PUBLIC_SUPABASE_URL || FALLBACK_URL;
