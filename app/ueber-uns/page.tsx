@@ -16,7 +16,7 @@ export default function UeberUnsPage() {
         <div className="container">
           <span className="eyebrow">Über uns</span>
           <h1 className="heading-display mb-68" style={{ maxWidth: "22ch" }}>
-            Zwei Menschen, ein System.
+            Hinter Living4Fans.
           </h1>
 
           <div className="ueber-grid">
