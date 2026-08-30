@@ -13,9 +13,9 @@ export default function SiteHeader() {
         <nav className="site-nav" aria-label="Hauptnavigation">
           <Link href="/shop">Shop</Link>
           <Link href="/konzept">Konzept</Link>
+          <Link href="/ueber-uns">Über uns</Link>
           <Link href="/#farben">Farben</Link>
           <Link href="/kontakt">Kontakt</Link>
-          <Link href="/kontakt">Anfrage</Link>
         </nav>
       </div>
     </header>

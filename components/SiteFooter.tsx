@@ -20,6 +20,7 @@ export default function SiteFooter() {
             <span className="label">Navigation</span>
             <Link href="/shop">Shop</Link>
             <Link href="/konzept">Konzept</Link>
+            <Link href="/ueber-uns">Über uns</Link>
             <Link href="/#farben">Farben</Link>
             <Link href="/kontakt">Kontakt</Link>
           </div>

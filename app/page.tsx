@@ -2,6 +2,7 @@ import Link from "next/link";
 import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import RoomTour from "@/components/RoomTour";
+import KundenGalerie from "@/components/KundenGalerie";
 import ProductCard from "@/components/ProductCard";
 import { USM_COLORS } from "@/lib/colors";
 import { PRODUCTS } from "@/lib/products";
@@ -278,6 +279,28 @@ export default function Home() {
                 </div>
               </div>
             </Reveal>
+          </div>
+        </div>
+      </section>
+
+      <hr className="hairline" />
+
+      {/* Kundenbilder — Ausschnitt */}
+      <section className="section">
+        <div className="container">
+          <Reveal>
+            <span className="eyebrow">Kundenbilder</span>
+            <h2 className="heading-display" style={{ maxWidth: "20ch" }}>
+              Angekommen — bei unseren Kunden.
+            </h2>
+          </Reveal>
+          <div className="mt-68">
+            <KundenGalerie anzahl={4} />
+          </div>
+          <div className="mt-40">
+            <Link href="/ueber-uns#kundenbilder" className="text-link">
+              Alle Kundenbilder ansehen →
+            </Link>
           </div>
         </div>
       </section>
