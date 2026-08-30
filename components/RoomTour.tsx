@@ -26,9 +26,9 @@ export default function RoomTour() {
       <div className="seq-caption">
         <span className="label tabular">Rundgang</span>
         <p>
-          Sieben Räume, eine Handschrift — vom Küchenblock über Barwagen bis
-          zum Lowboard verwandelt sich ein Design in das nächste. Jedes
-          Möbelstück ein aufbereitetes Original.
+          Raum für Raum, eine Handschrift — aufbereitete USM Haller
+          Möbelstücke prägen jede Bühne. Jedes Stück ein Original in Ihrer
+          Wunschfarbe.
         </p>
       </div>
     </section>
