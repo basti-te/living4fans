@@ -2,6 +2,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { getStripe } from "@/lib/stripeClient";
 import { adminClient } from "@/lib/supabase";
+import { getSettings, formatCents } from "@/lib/shop";
+import { sendeBenachrichtigung } from "@/lib/mail";
 
 export const dynamic = "force-dynamic";
 
@@ -23,23 +25,49 @@ async function verarbeiteSession(sessionId: string): Promise<{
 
     const sb = adminClient();
     if (sb) {
-      await sb.from("orders").upsert(
-        {
-          stripe_session_id: session.id,
-          product_id: session.metadata?.product_id || null,
-          betrag_cents: session.amount_total ?? 0,
-          versand_cents: 0,
-          wunschfarbe: session.metadata?.farbe || null,
-          kunde: {
-            name: session.customer_details?.name ?? null,
-            email: session.customer_details?.email ?? null,
-            telefon: session.customer_details?.phone ?? null,
-            adresse: session.collected_information?.shipping_details?.address ?? null,
-          },
-          status: "bezahlt",
-        },
-        { onConflict: "stripe_session_id" }
-      );
+      const { data: vorhanden } = await sb
+        .from("orders")
+        .select("id")
+        .eq("stripe_session_id", session.id)
+        .maybeSingle();
+      if (!vorhanden) {
+        const { data: neu } = await sb
+          .from("orders")
+          .insert({
+            stripe_session_id: session.id,
+            product_id: session.metadata?.product_id || null,
+            zahlungsart: "stripe",
+            betrag_cents: session.amount_total ?? 0,
+            versand_cents: 0,
+            wunschfarbe: session.metadata?.farbe || null,
+            kunde: {
+              name: session.customer_details?.name ?? null,
+              email: session.customer_details?.email ?? null,
+              telefon: session.customer_details?.phone ?? null,
+              adresse: session.collected_information?.shipping_details?.address ?? null,
+            },
+            status: "bezahlt",
+          })
+          .select("bestellnr")
+          .single();
+
+        const settings = await getSettings();
+        if (settings.mailBeiBestellung) {
+          await sendeBenachrichtigung(
+            settings.mailEmpfaenger,
+            `Neue bezahlte Bestellung ${neu?.bestellnr ?? ""} — ${session.metadata?.slug ?? "Möbelstück"}`,
+            `Neue Bestellung über Stripe (bereits bezahlt):\n\n` +
+              `Bestellnummer: ${neu?.bestellnr ?? "—"}\n` +
+              `Möbelstück: ${session.metadata?.slug ?? "—"}\n` +
+              `Wunschfarbe: ${session.metadata?.farbe ?? "—"}\n` +
+              `Betrag: ${formatCents(session.amount_total ?? 0)}\n\n` +
+              `Kunde: ${session.customer_details?.name ?? "—"}\n` +
+              `E-Mail: ${session.customer_details?.email ?? "—"}\n` +
+              `Telefon: ${session.customer_details?.phone ?? "—"}\n\n` +
+              `Details im Admin: https://living4fans.vercel.app/admin/bestellungen`
+          );
+        }
+      }
     }
     return {
       ok: true,

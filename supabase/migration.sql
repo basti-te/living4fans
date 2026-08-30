@@ -217,3 +217,27 @@ Alle unsere Möbelstücke sind preloved, fachgerecht aufgearbeitet und neu pulve
 ('c-beistelltisch', 'C-Beistelltisch, Glas', 'tische', 'Beistelltisch', $$Der flexible C-Tisch mit Glasplatte — neuwertig, in allen Farben.$$, $$Ein (oder mehrere) genial flexible USM Haller Beistelltische in C-Form mit Glasplatte. Preis für die Basisvariante inkl. MwSt. mit Rechnung; alle Farben auf Anfrage. Preloved, aufgearbeitet, neu pulverbeschichtet.$$, '', 26500, 'klein', 'entwurf', 340),
 ('highboard-regal-4400', 'Highboard-Regal', 'highboards', 'Highboard', $$Das große Regal-Highboard nach individuellen Wünschen — alle Farben.$$, $$Stilvolles Regal/Highboard von USM Haller in allen Farben und nach individuellen Wünschen. Preis für die Basisvariante inkl. MwSt. mit Rechnung; Konfiguration auf Anfrage. Preloved, professionell aufgearbeitet, neu pulverbeschichtet — Lieferung und Aufbau stimmen wir persönlich ab.$$, '', 440000, 'gross', 'entwurf', 350)
 on conflict (slug) do nothing;
+
+-- ——— Migration 2: Vorkasse, Bestellnummern, Zahlungs- & Mail-Einstellungen (30.08., bereits eingespielt) ———
+
+alter table orders alter column stripe_session_id drop not null;
+alter table orders drop constraint if exists orders_status_check;
+alter table orders add constraint orders_status_check
+  check (status in ('offen','bezahlt','in_produktion','versendet','abgeschlossen','storniert'));
+alter table orders add column if not exists zahlungsart text not null default 'stripe'
+  check (zahlungsart in ('stripe','vorkasse'));
+create sequence if not exists bestellnr_seq start 1001;
+alter table orders add column if not exists bestellnr text unique
+  default ('L4F-' || nextval('bestellnr_seq'));
+
+insert into settings (key, value) values
+  ('zahlung_stripe', 'true'),
+  ('zahlung_vorkasse', 'true'),
+  ('zahlung_paypal', 'true'),
+  ('bank_kontoinhaber', '"Alesja Schonhöft"'),
+  ('bank_iban', '"DE41 1001 1001 2621 0848 67"'),
+  ('paypal_empfaenger', '"living4fans@web.de"'),
+  ('mail_empfaenger', '"living4fans@web.de"'),
+  ('mail_bei_bestellung', 'true'),
+  ('mail_bei_anfrage', 'true')
+on conflict (key) do nothing;

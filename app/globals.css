@@ -1395,3 +1395,53 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+/* ——— Statistik ——— */
+
+.stat-block {
+  max-width: 800px;
+}
+
+.stat-rows {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: minmax(140px, 220px) 1fr 48px;
+  gap: 14px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.stat-row-label {
+  color: var(--charcoal);
+  line-height: 1.3;
+}
+
+.stat-row-track {
+  display: block;
+  height: 14px;
+  position: relative;
+}
+
+.stat-row-bar {
+  display: block;
+  height: 100%;
+  background: var(--walnut);
+  min-width: 2px;
+}
+
+.stat-row-count {
+  text-align: right;
+  color: var(--slate);
+}
+
+/* ——— Vorkasse-Bestätigung ——— */
+
+.vorkasse-bestaetigung {
+  border: var(--hairline);
+  padding: 24px;
+}

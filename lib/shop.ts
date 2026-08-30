@@ -25,6 +25,15 @@ export type ShopSettings = {
   radiusKm: number;
   grossSchwelleCents: number;
   plzZentrum: string;
+  zahlungStripe: boolean;
+  zahlungVorkasse: boolean;
+  zahlungPaypal: boolean;
+  bankKontoinhaber: string;
+  bankIban: string;
+  paypalEmpfaenger: string;
+  mailEmpfaenger: string;
+  mailBeiBestellung: boolean;
+  mailBeiAnfrage: boolean;
 };
 
 export const DEFAULT_SETTINGS: ShopSettings = {
@@ -33,6 +42,15 @@ export const DEFAULT_SETTINGS: ShopSettings = {
   radiusKm: 100,
   grossSchwelleCents: 250000,
   plzZentrum: "49439",
+  zahlungStripe: true,
+  zahlungVorkasse: true,
+  zahlungPaypal: true,
+  bankKontoinhaber: "Alesja Schonhöft",
+  bankIban: "",
+  paypalEmpfaenger: "living4fans@web.de",
+  mailEmpfaenger: "living4fans@web.de",
+  mailBeiBestellung: true,
+  mailBeiAnfrage: true,
 };
 
 export const GROESSE_LABELS: Record<Groesse, string> = {
@@ -192,12 +210,23 @@ export async function getSettings(): Promise<ShopSettings> {
   const { data } = await sb.from("settings").select("key, value");
   if (!data) return DEFAULT_SETTINGS;
   const map = Object.fromEntries(data.map((r) => [r.key, r.value]));
+  const bool = (v: unknown, fallback: boolean) =>
+    v === undefined || v === null ? fallback : v === true || v === "true";
   return {
     paketversandCents: Number(map.paketversand_cents ?? DEFAULT_SETTINGS.paketversandCents),
     lieferpauschaleCents: Number(map.lieferpauschale_cents ?? DEFAULT_SETTINGS.lieferpauschaleCents),
     radiusKm: Number(map.radius_km ?? DEFAULT_SETTINGS.radiusKm),
     grossSchwelleCents: Number(map.gross_schwelle_cents ?? DEFAULT_SETTINGS.grossSchwelleCents),
     plzZentrum: String(map.plz_zentrum ?? DEFAULT_SETTINGS.plzZentrum),
+    zahlungStripe: bool(map.zahlung_stripe, DEFAULT_SETTINGS.zahlungStripe),
+    zahlungVorkasse: bool(map.zahlung_vorkasse, DEFAULT_SETTINGS.zahlungVorkasse),
+    zahlungPaypal: bool(map.zahlung_paypal, DEFAULT_SETTINGS.zahlungPaypal),
+    bankKontoinhaber: String(map.bank_kontoinhaber ?? DEFAULT_SETTINGS.bankKontoinhaber),
+    bankIban: String(map.bank_iban ?? DEFAULT_SETTINGS.bankIban),
+    paypalEmpfaenger: String(map.paypal_empfaenger ?? DEFAULT_SETTINGS.paypalEmpfaenger),
+    mailEmpfaenger: String(map.mail_empfaenger ?? DEFAULT_SETTINGS.mailEmpfaenger),
+    mailBeiBestellung: bool(map.mail_bei_bestellung, DEFAULT_SETTINGS.mailBeiBestellung),
+    mailBeiAnfrage: bool(map.mail_bei_anfrage, DEFAULT_SETTINGS.mailBeiAnfrage),
   };
 }
 

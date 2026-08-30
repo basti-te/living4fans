@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 import { apiAdminAuthorized } from "@/lib/adminAuth";
 import { adminClient } from "@/lib/supabase";
 
-const STATI = ["bezahlt", "in_produktion", "versendet", "abgeschlossen", "storniert"];
+const STATI = ["offen", "bezahlt", "in_produktion", "versendet", "abgeschlossen", "storniert"];
 
 export async function PATCH(
   req: Request,

@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { publicClient } from "@/lib/supabase";
+import { getSettings } from "@/lib/shop";
+import { sendeBenachrichtigung } from "@/lib/mail";
 
 const TYPEN = ["anfrage", "angebot", "lieferung", "kontakt"];
 
@@ -41,6 +43,20 @@ export async function POST(req: Request) {
     return NextResponse.json(
       { error: "Anfrage konnte nicht gespeichert werden — bitte per E-Mail an living4fans@web.de." },
       { status: 500 }
+    );
+  }
+
+  const settings = await getSettings();
+  if (settings.mailBeiAnfrage) {
+    await sendeBenachrichtigung(
+      settings.mailEmpfaenger,
+      `Neue ${typ === "kontakt" ? "Kontaktanfrage" : "Anfrage"} über die Website — ${name}`,
+      `Neue Anfrage über living4fans:\n\n` +
+        `Typ: ${typ}\nName: ${name}\nE-Mail: ${email}\n` +
+        `Telefon: ${body.telefon || "—"}\nPLZ: ${body.plz || "—"}\n` +
+        `Wunschfarbe: ${body.wunschfarbe || "—"}\n\n` +
+        `Nachricht:\n${body.nachricht || "—"}\n\n` +
+        `Alle Anfragen im Admin: https://living4fans.vercel.app/admin/anfragen`
     );
   }
   return NextResponse.json({ ok: true });

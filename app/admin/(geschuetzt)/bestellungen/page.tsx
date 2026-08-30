@@ -5,6 +5,7 @@ import StatusSelect from "@/components/admin/StatusSelect";
 export const dynamic = "force-dynamic";
 
 const STATUS_OPTIONEN = [
+  { value: "offen", label: "Offen (Vorkasse erwartet)" },
   { value: "bezahlt", label: "Bezahlt" },
   { value: "in_produktion", label: "In Produktion" },
   { value: "versendet", label: "Versendet / geliefert" },
@@ -48,10 +49,12 @@ export default async function AdminBestellungen() {
         <table className="admin-table">
           <thead>
             <tr>
+              <th>Nr.</th>
               <th>Datum</th>
               <th>Möbelstück</th>
               <th>Wunschfarbe</th>
               <th>Betrag</th>
+              <th>Zahlung</th>
               <th>Kunde</th>
               <th>Status</th>
             </tr>
@@ -61,10 +64,12 @@ export default async function AdminBestellungen() {
               const kunde = (o.kunde ?? {}) as Kunde;
               return (
                 <tr key={o.id}>
+                  <td className="tabular">{o.bestellnr ?? "—"}</td>
                   <td>{new Date(o.created_at).toLocaleDateString("de-DE")}</td>
-                  <td>{(o.products as { name?: string } | null)?.name ?? o.stripe_session_id.slice(0, 12)}</td>
+                  <td>{(o.products as { name?: string } | null)?.name ?? "—"}</td>
                   <td>{o.wunschfarbe ?? "—"}</td>
                   <td className="tabular">{formatCents(o.betrag_cents)}</td>
+                  <td>{o.zahlungsart === "vorkasse" ? "Vorkasse" : "Stripe"}</td>
                   <td>
                     {kunde.name ?? "—"}
                     {kunde.email ? (

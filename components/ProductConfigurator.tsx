@@ -3,6 +3,7 @@
 import { useState } from "react";
 import SceneTile from "./SceneTile";
 import AnfrageForm from "./AnfrageForm";
+import VorkasseKauf from "./VorkasseKauf";
 import { USM_COLORS, getColor } from "@/lib/colors";
 import { formatPrice } from "@/lib/products";
 import {
@@ -40,6 +41,9 @@ export default function ProductConfigurator({
   const versandCents = versandCentsFuer(product, settings);
   const hatFotos = product.photos.length > 0;
   const hatRender = product.grid.length > 0;
+  const stripeAktiv = settings.zahlungStripe;
+  const vorkasseAktiv = settings.zahlungVorkasse || settings.zahlungPaypal;
+  const gesamtCents = Math.round(product.price * 100) + versandCents;
 
   const pruefePlz = async () => {
     setPlzError(null);
@@ -256,9 +260,14 @@ export default function ProductConfigurator({
                   {formatCents(versandCents)}.
                 </p>
                 <div className="pdp-actions" style={{ marginTop: 16 }}>
-                  <button className="btn-filled" onClick={kaufen} disabled={busy}>
-                    {busy ? "Einen Moment …" : `Jetzt kaufen — ${formatPrice(product.price + versandCents / 100)}`}
-                  </button>
+                  {stripeAktiv ? (
+                    <button className="btn-filled" onClick={kaufen} disabled={busy}>
+                      {busy ? "Einen Moment …" : `Jetzt kaufen — ${formatPrice(product.price + versandCents / 100)}`}
+                    </button>
+                  ) : null}
+                  {vorkasseAktiv ? (
+                    <VorkasseKauf slug={product.slug} farbe={colorId} plz={plz} betragCents={gesamtCents} />
+                  ) : null}
                 </div>
                 {kaufError ? (
                   <p className="caption" style={{ marginTop: 12, color: "#8a2b1d", textTransform: "none", letterSpacing: 0 }} role="alert">
@@ -283,9 +292,14 @@ export default function ProductConfigurator({
         ) : (
           <div>
             <div className="pdp-actions">
-              <button className="btn-filled" onClick={kaufen} disabled={busy}>
-                {busy ? "Einen Moment …" : `Jetzt kaufen — ${formatPrice(product.price + versandCents / 100)}`}
-              </button>
+              {stripeAktiv ? (
+                <button className="btn-filled" onClick={kaufen} disabled={busy}>
+                  {busy ? "Einen Moment …" : `Jetzt kaufen — ${formatPrice(product.price + versandCents / 100)}`}
+                </button>
+              ) : null}
+              {vorkasseAktiv ? (
+                <VorkasseKauf slug={product.slug} farbe={colorId} betragCents={gesamtCents} />
+              ) : null}
               <a href="/kontakt" className="pill">
                 Frage stellen
               </a>

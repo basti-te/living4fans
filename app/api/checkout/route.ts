@@ -21,6 +21,12 @@ export async function POST(req: Request) {
   if (!product || !product.id) {
     return NextResponse.json({ error: "Produkt nicht gefunden." }, { status: 404 });
   }
+  if (!settings.zahlungStripe) {
+    return NextResponse.json(
+      { error: "Kartenzahlung ist derzeit deaktiviert — bitte per Vorkasse bestellen oder anfragen." },
+      { status: 503 }
+    );
+  }
   // Serverseitige Durchsetzung der Logistik-Matrix — unabhängig vom Client.
   if (istAnfrageOnly(product, settings)) {
     return NextResponse.json(
