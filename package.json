@@ -8,9 +8,12 @@
     "start": "next start"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.112.4",
+    "jose": "^6.2.10",
     "next": "^15.4.6",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "stripe": "^22.6.0"
   },
   "devDependencies": {
     "@types/node": "^22",

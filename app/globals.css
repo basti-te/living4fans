@@ -1157,3 +1157,241 @@ button {
 .mb-40 { margin-bottom: 40px; }
 .mb-68 { margin-bottom: 68px; }
 .tabular { font-feature-settings: "tnum" on; }
+
+/* ——— Shop: Kauf & Galerie ——— */
+
+.pdp-thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+.pdp-thumb {
+  width: 64px;
+  height: 64px;
+  padding: 0;
+  border: 1px solid transparent;
+  background: none;
+  cursor: pointer;
+}
+
+.pdp-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.pdp-thumb.is-active {
+  border-color: var(--walnut);
+}
+
+.pdp input,
+select {
+  appearance: none;
+  border: 1px solid var(--walnut);
+  background: var(--linen);
+  color: var(--walnut);
+  padding: 10px 14px;
+  font: inherit;
+  border-radius: 0;
+}
+
+.form-field select {
+  appearance: none;
+  border: 1px solid var(--walnut);
+  background: var(--linen);
+  color: var(--walnut);
+  padding: 12px 14px;
+  font: inherit;
+  border-radius: 0;
+}
+
+.form-field input[type="file"] {
+  border: 1px dashed var(--slate);
+  padding: 14px;
+  font-size: 14px;
+}
+
+/* ——— Admin ——— */
+
+.admin-shell {
+  display: grid;
+  grid-template-columns: 230px 1fr;
+  min-height: calc(100svh - 65px);
+}
+
+.admin-nav {
+  border-right: var(--hairline);
+  padding: 40px 24px;
+  align-self: stretch;
+}
+
+.admin-nav nav {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.admin-nav nav a {
+  font-size: 15px;
+}
+
+.admin-main {
+  padding: 48px clamp(24px, 4vw, 64px) 96px;
+  min-width: 0;
+}
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  border: var(--hairline);
+  margin-bottom: 48px;
+}
+
+.stat-tile {
+  padding: 24px 20px;
+  border-right: var(--hairline);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.stat-tile:last-child {
+  border-right: 0;
+}
+
+.stat-value {
+  font-size: 34px;
+  font-weight: 500;
+  line-height: 1;
+}
+
+.admin-cols {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.admin-table th {
+  text-align: left;
+  font-size: 11px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  padding: 10px 12px 10px 0;
+  border-bottom: var(--hairline);
+  color: var(--slate);
+}
+
+.admin-table td {
+  padding: 12px 12px 12px 0;
+  border-bottom: var(--hairline);
+  vertical-align: top;
+}
+
+.status-pill {
+  display: inline-block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: var(--track-label);
+  border: 1px solid var(--walnut);
+  padding: 3px 8px;
+  white-space: nowrap;
+}
+
+.status-entwurf,
+.status-in_bearbeitung {
+  color: var(--slate);
+  border-color: var(--slate);
+}
+
+.status-verkauft,
+.status-erledigt {
+  color: var(--slate);
+  border-color: transparent;
+  background: #e4dfd2;
+}
+
+.admin-photo-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.admin-photo {
+  width: 120px;
+}
+
+.admin-photo img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  display: block;
+  border: var(--hairline);
+}
+
+.admin-photo-actions {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.admin-photo-actions button {
+  border: var(--hairline);
+  background: none;
+  padding: 2px 8px;
+  cursor: pointer;
+  font-size: 12px;
+  color: var(--walnut);
+}
+
+.admin-inquiry {
+  border-bottom: var(--hairline);
+}
+
+.admin-inquiry summary {
+  display: flex;
+  gap: 18px;
+  align-items: baseline;
+  padding: 16px 0;
+  cursor: pointer;
+  flex-wrap: wrap;
+  list-style: none;
+}
+
+.admin-inquiry summary::-webkit-details-marker {
+  display: none;
+}
+
+.admin-inquiry-body {
+  padding: 0 0 24px;
+  max-width: 640px;
+}
+
+@media (max-width: 900px) {
+  .admin-shell {
+    grid-template-columns: 1fr;
+  }
+  .admin-nav {
+    border-right: 0;
+    border-bottom: var(--hairline);
+    padding: 24px var(--page-pad);
+  }
+  .admin-nav nav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  .admin-cols {
+    grid-template-columns: 1fr;
+  }
+}

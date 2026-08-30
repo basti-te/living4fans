@@ -1,6 +1,9 @@
 import { Suspense } from "react";
 import type { Metadata } from "next";
 import ShopGrid from "@/components/ShopGrid";
+import { getShopProducts } from "@/lib/shop";
+
+export const revalidate = 60;
 
 export const metadata: Metadata = {
   title: "Shop",
@@ -8,7 +11,8 @@ export const metadata: Metadata = {
     "Aufbereitete USM Haller Sideboards, Highboards, Regale und Container — neu pulverbeschichtet in Ihrer Wunschfarbe.",
 };
 
-export default function ShopPage() {
+export default async function ShopPage() {
+  const products = await getShopProducts();
   return (
     <>
       <section className="section" style={{ paddingBottom: 48 }}>
@@ -25,7 +29,7 @@ export default function ShopPage() {
         </div>
       </section>
       <Suspense>
-        <ShopGrid />
+        <ShopGrid products={products} />
       </Suspense>
     </>
   );

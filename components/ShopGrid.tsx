@@ -3,19 +3,41 @@
 import { useMemo } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 import ProductCard from "./ProductCard";
-import { CATEGORIES, PRODUCTS } from "@/lib/products";
+import type { ShopProduct } from "@/lib/shop";
 
-export default function ShopGrid() {
+const CATEGORY_LABELS: Record<string, string> = {
+  sideboards: "Sideboards",
+  highboards: "Highboards",
+  lowboards: "Lowboards",
+  regale: "Regale",
+  container: "Container",
+  tische: "Tische",
+  nachttische: "Nachttische",
+  servierwagen: "Servierwagen & Bars",
+  flur: "Flur & Garderobe",
+  kuechen: "Küche & Bad",
+  accessoires: "Accessoires",
+  individuell: "Individuell",
+};
+
+export default function ShopGrid({ products }: { products: ShopProduct[] }) {
   const router = useRouter();
   const params = useSearchParams();
   const active = params.get("kategorie") ?? "alle";
 
+  const categories = useMemo(() => {
+    const present = new Set(products.map((p) => p.category));
+    return Object.entries(CATEGORY_LABELS)
+      .filter(([id]) => present.has(id))
+      .map(([id, label]) => ({ id, label }));
+  }, [products]);
+
   const filtered = useMemo(
     () =>
       active === "alle"
-        ? PRODUCTS
-        : PRODUCTS.filter((p) => p.category === active),
-    [active]
+        ? products
+        : products.filter((p) => p.category === active),
+    [active, products]
   );
 
   const setCategory = (id: string) => {
@@ -34,7 +56,7 @@ export default function ShopGrid() {
           >
             Alle
           </button>
-          {CATEGORIES.map((c) => (
+          {categories.map((c) => (
             <button
               key={c.id}
               className={`pill ${active === c.id ? "is-active" : ""}`}

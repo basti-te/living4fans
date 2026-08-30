@@ -4,11 +4,9 @@ import type { Metadata } from "next";
 import ProductConfigurator from "@/components/ProductConfigurator";
 import ProductCard from "@/components/ProductCard";
 import Reveal from "@/components/Reveal";
-import { PRODUCTS, getProduct } from "@/lib/products";
+import { getShopProduct, getShopProducts, getSettings } from "@/lib/shop";
 
-export function generateStaticParams() {
-  return PRODUCTS.map((p) => ({ slug: p.slug }));
-}
+export const revalidate = 60;
 
 export async function generateMetadata({
   params,
@@ -16,7 +14,7 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const product = getProduct(slug);
+  const product = await getShopProduct(slug);
   if (!product) return {};
   return {
     title: product.name,
@@ -30,10 +28,14 @@ export default async function ProductPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const product = getProduct(slug);
+  const [product, settings] = await Promise.all([
+    getShopProduct(slug),
+    getSettings(),
+  ]);
   if (!product) notFound();
 
-  const related = PRODUCTS.filter((p) => p.slug !== product.slug).slice(0, 3);
+  const all = await getShopProducts();
+  const related = all.filter((p) => p.slug !== product.slug).slice(0, 3);
 
   return (
     <>
@@ -44,28 +46,31 @@ export default async function ProductPage({
             <span>/</span>
             <span>{product.name}</span>
           </div>
-          <ProductConfigurator product={product} />
+          <ProductConfigurator product={product} settings={settings} />
         </div>
       </section>
 
-      <hr className="hairline" />
-
-      <section className="section">
-        <div className="container">
-          <div className="split">
-            <Reveal>
-              <div className="split-label">Was wir an diesem Möbelstück machen</div>
-            </Reveal>
-            <Reveal delay={100}>
-              <ul className="detail-list">
-                {product.details.map((d) => (
-                  <li key={d}>{d}</li>
-                ))}
-              </ul>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+      {product.details.length > 0 ? (
+        <>
+          <hr className="hairline" />
+          <section className="section">
+            <div className="container">
+              <div className="split">
+                <Reveal>
+                  <div className="split-label">Was wir an diesem Möbelstück machen</div>
+                </Reveal>
+                <Reveal delay={100}>
+                  <ul className="detail-list">
+                    {product.details.map((d) => (
+                      <li key={d}>{d}</li>
+                    ))}
+                  </ul>
+                </Reveal>
+              </div>
+            </div>
+          </section>
+        </>
+      ) : null}
 
       <hr className="hairline" />
 
