@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     template: "%s — Living4Fans",
   },
   description:
-    "Living4Fans bereitet originale USM Haller Möbel in Handarbeit auf und pulverbeschichtet sie neu — in jeder RAL-Wunschfarbe. Sideboards, Highboards, Regale und Container mit Versand in ganz Europa.",
+    "Living4Fans bereitet originale USM Haller Möbel in Handarbeit auf und pulverbeschichtet sie neu — in jeder RAL-Wunschfarbe. Sideboards, Highboards, Regale und Container — Versand und Lieferung innerhalb Deutschlands.",
 };
 
 export const viewport: Viewport = {

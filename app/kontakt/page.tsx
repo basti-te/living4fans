@@ -62,7 +62,7 @@ export default function KontaktPage() {
                     <span className="label meta" style={{ display: "block", marginBottom: 4 }}>
                       Versand
                     </span>
-                    <span style={{ fontSize: 19 }}>Europaweit</span>
+                    <span style={{ fontSize: 19 }}>Deutschlandweit</span>
                   </div>
                 </div>
               </div>
