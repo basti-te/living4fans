@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Reveal from "@/components/Reveal";
 import ContactForm from "@/components/ContactForm";
+import { WHATSAPP_LINK } from "@/lib/whatsapp";
 
 export const metadata: Metadata = {
   title: "Kontakt",
@@ -50,6 +51,16 @@ export default function KontaktPage() {
                     </span>
                     <a href="tel:+491788319818" style={{ fontSize: 19 }}>
                       0178 8319818
+                    </a>
+                  </div>
+                  <div>
+                    <a
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="pill"
+                    >
+                      WhatsApp-Chat starten
                     </a>
                   </div>
                   <div>

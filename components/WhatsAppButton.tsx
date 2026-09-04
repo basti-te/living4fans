@@ -1,12 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-
-const WA_LINK =
-  "https://wa.me/491788319818?text=" +
-  encodeURIComponent(
-    "Hallo Living4Fans, ich interessiere mich für ein USM Haller Möbelstück."
-  );
+import { WHATSAPP_LINK as WA_LINK } from "@/lib/whatsapp";
 
 export default function WhatsAppButton() {
   const pathname = usePathname();
