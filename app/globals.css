@@ -1523,3 +1523,45 @@ select {
     border-bottom: none;
   }
 }
+
+/* ——— WhatsApp-Button ——— */
+
+.wa-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--walnut);
+  color: var(--linen);
+  padding: 13px 18px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: var(--track-caption);
+  border: 1px solid var(--walnut);
+  transition: background-color 0.25s var(--ease-out), color 0.25s var(--ease-out);
+}
+
+.wa-btn:hover {
+  background: var(--linen);
+  color: var(--walnut);
+}
+
+.wa-btn svg {
+  display: block;
+  flex-shrink: 0;
+}
+
+@media (max-width: 760px) {
+  .wa-btn {
+    right: 14px;
+    bottom: 14px;
+    padding: 13px;
+  }
+  .wa-btn-label {
+    display: none;
+  }
+}

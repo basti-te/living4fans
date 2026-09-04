@@ -28,6 +28,13 @@ export default function SiteFooter() {
             <span className="label">Kontakt</span>
             <a href="mailto:living4fans@web.de">living4fans@web.de</a>
             <a href="tel:+491788319818">0178 8319818</a>
+            <a
+              href="https://wa.me/491788319818"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              WhatsApp-Chat starten
+            </a>
             <Link href="/kontakt">Rückruf vereinbaren</Link>
           </div>
           <div className="footer-col">
