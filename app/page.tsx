@@ -5,7 +5,7 @@ import RoomTour from "@/components/RoomTour";
 import KundenGalerie from "@/components/KundenGalerie";
 import ProductCard from "@/components/ProductCard";
 import { USM_COLORS } from "@/lib/colors";
-import { PRODUCTS } from "@/lib/products";
+import { getShopProducts } from "@/lib/shop";
 
 const PROCESS = [
   {
@@ -42,24 +42,17 @@ const CATEGORY_LINKS = [
   { label: "Sideboards", href: "/shop?kategorie=sideboards" },
   { label: "Highboards", href: "/shop?kategorie=highboards" },
   { label: "Lowboards", href: "/shop?kategorie=lowboards" },
-  { label: "Regale", href: "/shop?kategorie=regale" },
-  { label: "Container", href: "/shop?kategorie=container" },
-  { label: "Beistelltische", href: "/shop?kategorie=tische" },
+  { label: "Tische", href: "/shop?kategorie=tische" },
+  { label: "Servierwagen & Bars", href: "/shop?kategorie=servierwagen" },
+  { label: "Küche & Bad", href: "/shop?kategorie=kuechen" },
 ];
 
-const HOME_SIGNATURES = [
-  "haller-sideboard-m",
-  "haller-lowboard-tv",
-  "haller-highboard-l",
-  "haller-rollcontainer",
-  "haller-sideboard-xl",
-  "haller-regal-atelier",
-];
+export const revalidate = 60;
 
-export default function Home() {
-  const signatures = HOME_SIGNATURES.map(
-    (slug) => PRODUCTS.find((p) => p.slug === slug)!
-  );
+export default async function Home() {
+  const bestand = (await getShopProducts())
+    .filter((p) => p.photos.length > 0)
+    .slice(0, 6);
 
   return (
     <>
@@ -81,10 +74,10 @@ export default function Home() {
       {/* Rundgang: vier Räume morphen ineinander */}
       <RoomTour />
 
-      {/* Die Signaturen */}
+      {/* Aus dem Bestand */}
       <section className="section" style={{ paddingTop: 40 }}>
         <div className="display-deco-wrap" aria-hidden="true">
-          <div className="display-deco">Signaturen</div>
+          <div className="display-deco">Originale</div>
         </div>
         <div className="container" style={{ marginTop: 56 }}>
           <Reveal>
@@ -99,9 +92,9 @@ export default function Home() {
               className="mb-68"
             >
               <div>
-                <span className="eyebrow">Die Signaturen</span>
-                <h2 className="heading-display" style={{ maxWidth: "16ch" }}>
-                  Jede Farbe hat ihren Ort.
+                <span className="eyebrow">Aus dem Bestand</span>
+                <h2 className="heading-display" style={{ maxWidth: "18ch" }}>
+                  Aktuelle Stücke, bereit für Ihre Farbe.
                 </h2>
               </div>
               <Link href="/shop" className="pill">
@@ -111,14 +104,13 @@ export default function Home() {
           </Reveal>
           <Reveal delay={80}>
             <p className="body-copy mb-68">
-              Ein Licht, acht Orte: Unsere Signaturen zeigen, was
-              Pulverbeschichtung kann, wenn man sie ernst nimmt. Jedes Stück
-              ist ein aufbereitetes Original — und jede Signatur in jeder
-              Konfiguration bestellbar.
+              Vom Beistelltisch bis zur Kücheninsel: Diese Möbelstücke stehen
+              aufbereitet bei uns in Steinfeld — jedes ein Original, jedes in
+              jeder USM- oder RAL-Farbe bestellbar.
             </p>
           </Reveal>
           <div className="product-grid">
-            {signatures.map((product, i) => (
+            {bestand.map((product, i) => (
               <Reveal key={product.slug} delay={(i % 3) * 100}>
                 <ProductCard product={product} />
               </Reveal>
