@@ -20,20 +20,37 @@ export default function UeberUnsPage() {
           </h1>
 
           <div className="ueber-grid">
-            <Reveal>
-              <figure>
-                <div className="tile-frame">
-                  <img
-                    src="/media/alesja-lager.jpg"
-                    alt="Alesja Schonhöft im Living4Fans Lager zwischen USM Haller Möbelstücken"
-                    style={{ display: "block", width: "100%" }}
-                  />
-                </div>
-                <figcaption className="caption meta" style={{ marginTop: 14 }}>
-                  Alesja Schonhöft im Lager — Steinfeld (Oldb.)
-                </figcaption>
-              </figure>
-            </Reveal>
+            <div style={{ display: "flex", flexDirection: "column", gap: 48 }}>
+              <Reveal>
+                <figure>
+                  <div className="tile-frame">
+                    <img
+                      src="/media/alesja-lager.jpg"
+                      alt="Alesja Schonhöft im Living4Fans Lager zwischen USM Haller Möbelstücken"
+                      style={{ display: "block", width: "100%" }}
+                    />
+                  </div>
+                  <figcaption className="caption meta" style={{ marginTop: 14 }}>
+                    Alesja Schonhöft im Lager — Steinfeld (Oldb.)
+                  </figcaption>
+                </figure>
+              </Reveal>
+              <Reveal delay={80}>
+                <figure>
+                  <div className="tile-frame">
+                    <img
+                      src="/media/stephan-werkstatt.jpg"
+                      alt="Stephan Schonhöft in der Living4Fans Werkstatt"
+                      style={{ display: "block", width: "100%" }}
+                      loading="lazy"
+                    />
+                  </div>
+                  <figcaption className="caption meta" style={{ marginTop: 14 }}>
+                    Stephan Schonhöft in der Werkstatt
+                  </figcaption>
+                </figure>
+              </Reveal>
+            </div>
 
             <Reveal delay={100}>
               <div>
