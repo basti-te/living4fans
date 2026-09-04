@@ -65,6 +65,7 @@ export default function ProduktForm({ product }: { product?: ShopProduct }) {
     product?.versandkosten != null ? String(product.versandkosten / 100) : ""
   );
   const [farbwahl, setFarbwahl] = useState(product?.farbwahl ?? true);
+  const [nurAnfrage, setNurAnfrage] = useState(product?.nurAnfrage ?? false);
   const [status, setStatus] = useState(product?.status ?? "entwurf");
   const [photos, setPhotos] = useState<string[]>(product?.photos ?? []);
   const [uploading, setUploading] = useState(false);
@@ -122,6 +123,7 @@ export default function ProduktForm({ product }: { product?: ShopProduct }) {
           ? null
           : Math.round(parseFloat(versandkosten.replace(",", ".")) * 100),
       farbwahl,
+      nur_anfrage: nurAnfrage,
       status,
       photos,
     };
@@ -219,6 +221,21 @@ export default function ProduktForm({ product }: { product?: ShopProduct }) {
       <div className="form-field">
         <label className="label" htmlFor="pf-preis">Preis in € (leer = „Preis auf Anfrage")</label>
         <input id="pf-preis" value={preis} onChange={(e) => setPreis(e.target.value)} inputMode="decimal" placeholder="z. B. 1450" />
+      </div>
+
+      <div className="form-field">
+        <label style={{ display: "flex", gap: 10, alignItems: "flex-start", cursor: "pointer" }}>
+          <input type="checkbox" checked={nurAnfrage} onChange={(e) => setNurAnfrage(e.target.checked)} style={{ marginTop: 3 }} />
+          <span>
+            <span className="label" style={{ marginBottom: 0 }}>Nur auf Anfrage verkaufen</span>
+            <br />
+            <span className="caption meta" style={{ textTransform: "none", letterSpacing: 0 }}>
+              Preis bleibt sichtbar, aber statt Kaufen-Button erscheint das
+              Angebotsformular — für Stücke, die im persönlichen Gespräch
+              verkauft werden sollen.
+            </span>
+          </span>
+        </label>
       </div>
 
       <div className="form-field">

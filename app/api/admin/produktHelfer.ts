@@ -52,6 +52,7 @@ export function productPayload(body: Record<string, unknown>): {
           ? null
           : Math.round(Number(versand)),
       farbwahl: Boolean(body.farbwahl ?? true),
+      nur_anfrage: Boolean(body.nur_anfrage ?? false),
       status,
       sort: Number.isFinite(Number(body.sort)) ? Number(body.sort) : 100,
     },

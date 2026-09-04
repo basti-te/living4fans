@@ -241,3 +241,6 @@ insert into settings (key, value) values
   ('mail_bei_bestellung', 'true'),
   ('mail_bei_anfrage', 'true')
 on conflict (key) do nothing;
+
+-- ——— Migration 3: „Nur auf Anfrage"-Schalter (04.09., bereits eingespielt) ———
+alter table products add column if not exists nur_anfrage boolean not null default false;

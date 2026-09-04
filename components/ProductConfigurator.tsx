@@ -44,6 +44,9 @@ export default function ProductConfigurator({
   const stripeAktiv = settings.zahlungStripe;
   const vorkasseAktiv = settings.zahlungVorkasse || settings.zahlungPaypal;
   const gesamtCents = Math.round(product.price * 100) + versandCents;
+  const grossAnfrage =
+    product.groesse === "gross" ||
+    Math.round(product.price * 100) >= settings.grossSchwelleCents;
 
   const pruefePlz = async () => {
     setPlzError(null);
@@ -153,9 +156,11 @@ export default function ProductConfigurator({
           <span className="meta">
             {product.aufAnfrage
               ? "je nach Konfiguration — inkl. MwSt., mit Rechnung"
-              : anfrageOnly
+              : grossAnfrage
                 ? "inkl. MwSt., mit Rechnung — Lieferung & Aufbau nach Absprache"
-                : `inkl. MwSt., mit Rechnung — zzgl. ${formatCents(versandCents)} ${product.groesse === "klein" ? "Paketversand" : "Lieferpauschale"}`}
+                : anfrageOnly
+                  ? "inkl. MwSt., mit Rechnung — Verkauf auf Anfrage"
+                  : `inkl. MwSt., mit Rechnung — zzgl. ${formatCents(versandCents)} ${product.groesse === "klein" ? "Paketversand" : "Lieferpauschale"}`}
           </span>
         </div>
 

@@ -12,6 +12,8 @@ export type ShopProduct = Product & {
   groesse: Groesse;
   /** true = kein Festpreis, nur „Angebot anfragen" (VB / individuelle Konfiguration) */
   aufAnfrage: boolean;
+  /** true = Preis wird angezeigt, aber Verkauf läuft ausschließlich über Anfrage (kein Kaufen-Button) */
+  nurAnfrage: boolean;
   /** Versandkosten-Override in Cent (klein) bzw. Lieferpauschale (mittel); null = Standard aus Einstellungen */
   versandkosten: number | null;
   farbwahl: boolean;
@@ -63,6 +65,7 @@ export const GROESSE_LABELS: Record<Groesse, string> = {
 export function istAnfrageOnly(p: ShopProduct, s: ShopSettings): boolean {
   return (
     p.aufAnfrage ||
+    p.nurAnfrage ||
     p.groesse === "gross" ||
     Math.round(p.price * 100) >= s.grossSchwelleCents
   );
@@ -90,6 +93,7 @@ type Row = {
   groesse: Groesse;
   versandkosten_cents: number | null;
   farbwahl: boolean;
+  nur_anfrage?: boolean;
   status: "aktiv" | "entwurf" | "verkauft";
   sort: number;
   product_images?: { url: string; sort: number }[];
@@ -122,6 +126,7 @@ function mapRow(r: Row): ShopProduct {
     id: r.id,
     groesse: r.groesse,
     aufAnfrage: r.preis_cents == null,
+    nurAnfrage: Boolean(r.nur_anfrage),
     versandkosten: r.versandkosten_cents,
     farbwahl: r.farbwahl,
     photos,
@@ -143,6 +148,7 @@ function mapStatic(p: Product): ShopProduct {
     id: null,
     groesse: fallbackGroesse(p),
     aufAnfrage: false,
+    nurAnfrage: false,
     versandkosten: null,
     farbwahl: true,
     photos: [],

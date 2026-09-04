@@ -1,13 +1,8 @@
 import Link from "next/link";
 import { getAllProductsAdmin, formatCents } from "@/lib/shop";
+import ProduktQuickActions from "@/components/admin/ProduktQuickActions";
 
 export const dynamic = "force-dynamic";
-
-const STATUS_LABEL: Record<string, string> = {
-  aktiv: "Aktiv",
-  entwurf: "Entwurf",
-  verkauft: "Verkauft",
-};
 
 const GROESSE_KURZ: Record<string, string> = {
   klein: "Klein · Paketversand",
@@ -55,9 +50,13 @@ export default async function AdminProdukte() {
                 <td>{GROESSE_KURZ[p.groesse]}</td>
                 <td className="tabular">{p.photos.length}</td>
                 <td>
-                  <span className={`status-pill status-${p.status}`}>
-                    {STATUS_LABEL[p.status]}
-                  </span>
+                  {p.id ? (
+                    <ProduktQuickActions
+                      id={p.id}
+                      status={p.status}
+                      nurAnfrage={p.nurAnfrage}
+                    />
+                  ) : null}
                 </td>
                 <td>
                   {p.id ? (
