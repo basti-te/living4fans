@@ -50,7 +50,9 @@ export default function SiteFooter() {
             Living4Fans ist ein unabhängiger Anbieter für aufbereitete
             Gebrauchtmöbel und steht in keiner geschäftlichen Verbindung zur
             USM U. Schärer Söhne AG. „USM" und „USM Haller" sind Marken ihrer
-            jeweiligen Inhaber.
+            jeweiligen Inhaber. Einige Bilder und Videos auf dieser Website
+            wurden mit KI-Unterstützung erstellt oder bearbeitet und sind
+            entsprechend gekennzeichnet.
           </p>
           <p>© {new Date().getFullYear()} Living4Fans</p>
         </div>

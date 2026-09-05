@@ -1,3 +1,5 @@
+import KiBadge from "./KiBadge";
+
 export default function Hero() {
   return (
     <section
@@ -34,6 +36,7 @@ export default function Hero() {
           alt=""
           aria-hidden="true"
         />
+        <KiBadge text="KI-generierte Visualisierung" position="links" />
       </div>
     </section>
   );

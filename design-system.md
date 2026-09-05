@@ -70,7 +70,9 @@ Jedes Produkt-/Kampagnenbild folgt diesen prüfbaren Regeln:
    zeigen Funktion, solange sie das Möbelstück nicht verdecken.
 5. Auf dem Bild liegt niemals UI: kein Text, kein Badge, kein Preis, kein
    Verlauf — auch im Hero nicht. Der Hero-Textblock steht auf Gips oberhalb
-   des Mediums.
+   des Mediums. EINZIGE Ausnahme: das kleine KI-Kennzeichnungs-Label in der
+   Bildecke (gesetzliche Pflicht, Art. 50 EU AI Act) — 9px, halbtransparent,
+   unten links bei Videos/Vollbreite, unten rechts bei Kacheln.
 6. Produktnamen stehen in Versalien UNTER der Kachel, mit Preis rechts.
 
 ## 5. Signatur-Farbkarte (Content, nicht UI)

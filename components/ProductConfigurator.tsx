@@ -4,6 +4,7 @@ import { useState } from "react";
 import SceneTile from "./SceneTile";
 import AnfrageForm from "./AnfrageForm";
 import VorkasseKauf from "./VorkasseKauf";
+import KiBadge from "./KiBadge";
 import { USM_COLORS, getColor } from "@/lib/colors";
 import { formatPrice } from "@/lib/products";
 import {
@@ -100,6 +101,7 @@ export default function ProductConfigurator({
                 src={product.photos[photoIndex]}
                 alt={`${product.name} — Foto ${photoIndex + 1}`}
               />
+              {product.kiBilder ? <KiBadge text="KI-inszeniert" /> : null}
             </div>
           ) : hatRender ? (
             <SceneTile
@@ -137,7 +139,11 @@ export default function ProductConfigurator({
           style={{ marginTop: 14, display: "flex", justifyContent: "space-between", gap: 12 }}
         >
           <span>
-            {hatFotos ? "Basisvariante — Beispielfotos" : `Illustration — Konfiguration ${color.name}`}
+            {hatFotos
+              ? product.kiBilder
+                ? "Basisvariante — Beispielbilder, Umgebung KI-inszeniert"
+                : "Basisvariante — Beispielfotos"
+              : `Illustration — Konfiguration ${color.name}`}
           </span>
           {product.farbwahl ? <span>{color.ral}</span> : null}
         </div>

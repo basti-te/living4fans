@@ -1,12 +1,13 @@
 import Link from "next/link";
 import SceneTile from "./SceneTile";
+import KiBadge from "./KiBadge";
 import { getColor } from "@/lib/colors";
 import { formatPrice, type Product } from "@/lib/products";
 
 export default function ProductCard({
   product,
 }: {
-  product: Product & { aufAnfrage?: boolean };
+  product: Product & { aufAnfrage?: boolean; kiBilder?: boolean };
 }) {
   const color = getColor(product.defaultColor);
   const title = product.signature ?? product.name;
@@ -31,6 +32,7 @@ export default function ProductCard({
               alt={`${product.name} in ${color.name}, aufgenommen: ${product.ort}`}
               loading="lazy"
             />
+            {product.kiBilder ? <KiBadge text="KI-inszeniert" /> : null}
           </div>
         ) : product.grid.length > 0 ? (
           <SceneTile

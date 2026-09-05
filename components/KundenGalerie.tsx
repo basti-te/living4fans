@@ -9,7 +9,6 @@ const ALLE_BILDER = [
   { src: "/media/kunden/kunde-08.jpg", alt: "Schwarze USM Haller Bürokombination mit Regal" },
   { src: "/media/kunden/kunde-09.jpg", alt: "Beiger USM Haller Servierwagen" },
   { src: "/media/kunden/kunde-10.jpg", alt: "Weißes USM Haller Sideboard mit geöffnetem Auszug" },
-  { src: "/media/kunden/kunde-11.jpg", alt: "Oranger USM Haller Container in einer Praxis" },
   { src: "/media/kunden/kunde-12.jpg", alt: "Oranger USM Haller Barwagen im Esszimmer" },
 ];
 

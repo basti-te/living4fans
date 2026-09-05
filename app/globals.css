@@ -656,6 +656,7 @@ button {
 /* ——— Kacheln & Karten ——— */
 
 .tile-frame {
+  position: relative;
   border: var(--hairline);
 }
 
@@ -1564,4 +1565,33 @@ select {
   .wa-btn-label {
     display: none;
   }
+}
+
+/* ——— KI-Kennzeichnung (Art. 50 EU AI Act) ——— */
+
+.ki-badge {
+  position: absolute;
+  bottom: 8px;
+  z-index: 3;
+  font-size: 9px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  padding: 4px 7px;
+  color: rgba(239, 235, 226, 0.92);
+  background: rgba(38, 35, 29, 0.42);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  border-radius: 2px;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.ki-badge-rechts {
+  right: 8px;
+}
+
+.ki-badge-links {
+  left: 8px;
 }

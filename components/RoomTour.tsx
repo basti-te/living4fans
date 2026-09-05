@@ -1,3 +1,5 @@
+import KiBadge from "./KiBadge";
+
 export default function RoomTour() {
   return (
     <section
@@ -22,6 +24,7 @@ export default function RoomTour() {
           alt=""
           aria-hidden="true"
         />
+        <KiBadge text="KI-generierte Visualisierung" position="links" />
       </div>
       <div className="seq-caption">
         <span className="label tabular">Rundgang</span>

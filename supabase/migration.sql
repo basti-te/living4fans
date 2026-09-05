@@ -244,3 +244,7 @@ on conflict (key) do nothing;
 
 -- ——— Migration 3: „Nur auf Anfrage"-Schalter (04.09., bereits eingespielt) ———
 alter table products add column if not exists nur_anfrage boolean not null default false;
+
+-- ——— Migration 4: KI-Bild-Kennzeichnung (bereits eingespielt) ———
+alter table products add column if not exists ki_bilder boolean not null default false;
+update products set ki_bilder = true where id in (select distinct product_id from product_images where url like '/media/produkte/%');

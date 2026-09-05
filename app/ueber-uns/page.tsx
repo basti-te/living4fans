@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
 import KundenGalerie from "@/components/KundenGalerie";
+import KiBadge from "@/components/KiBadge";
 
 export const metadata: Metadata = {
   title: "Über uns",
@@ -29,6 +30,7 @@ export default function UeberUnsPage() {
                       alt="Alesja Schonhöft im Living4Fans Lager zwischen USM Haller Möbelstücken"
                       style={{ display: "block", width: "100%" }}
                     />
+                    <KiBadge text="Aufnahme KI-bearbeitet" />
                   </div>
                   <figcaption className="caption meta" style={{ marginTop: 14 }}>
                     Alesja Schonhöft im Lager — Steinfeld (Oldb.)
@@ -44,6 +46,7 @@ export default function UeberUnsPage() {
                       style={{ display: "block", width: "100%" }}
                       loading="lazy"
                     />
+                    <KiBadge text="Aufnahme KI-bearbeitet" />
                   </div>
                   <figcaption className="caption meta" style={{ marginTop: 14 }}>
                     Stephan Schonhöft in der Werkstatt

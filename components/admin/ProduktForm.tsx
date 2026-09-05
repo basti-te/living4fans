@@ -66,6 +66,7 @@ export default function ProduktForm({ product }: { product?: ShopProduct }) {
   );
   const [farbwahl, setFarbwahl] = useState(product?.farbwahl ?? true);
   const [nurAnfrage, setNurAnfrage] = useState(product?.nurAnfrage ?? false);
+  const [kiBilder, setKiBilder] = useState(product?.kiBilder ?? false);
   const [status, setStatus] = useState(product?.status ?? "entwurf");
   const [photos, setPhotos] = useState<string[]>(product?.photos ?? []);
   const [uploading, setUploading] = useState(false);
@@ -124,6 +125,7 @@ export default function ProduktForm({ product }: { product?: ShopProduct }) {
           : Math.round(parseFloat(versandkosten.replace(",", ".")) * 100),
       farbwahl,
       nur_anfrage: nurAnfrage,
+      ki_bilder: kiBilder,
       status,
       photos,
     };
@@ -300,6 +302,18 @@ export default function ProduktForm({ product }: { product?: ShopProduct }) {
           onChange={(e) => upload(e.target.files)}
           disabled={uploading}
         />
+        <label style={{ display: "flex", gap: 10, alignItems: "flex-start", cursor: "pointer", marginTop: 12 }}>
+          <input type="checkbox" checked={kiBilder} onChange={(e) => setKiBilder(e.target.checked)} style={{ marginTop: 3 }} />
+          <span>
+            <span className="label" style={{ marginBottom: 0 }}>Bilder sind KI-generiert / KI-inszeniert</span>
+            <br />
+            <span className="caption meta" style={{ textTransform: "none", letterSpacing: 0 }}>
+              Blendet die gesetzlich vorgeschriebene Kennzeichnung (EU AI Act)
+              als kleines Label in der Bildecke ein. Bei echten Fotos
+              abwählen.
+            </span>
+          </span>
+        </label>
         {uploading ? (
           <p className="caption meta" style={{ textTransform: "none", letterSpacing: 0 }}>Lädt hoch …</p>
         ) : null}

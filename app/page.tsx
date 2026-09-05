@@ -4,6 +4,7 @@ import Reveal from "@/components/Reveal";
 import RoomTour from "@/components/RoomTour";
 import KundenGalerie from "@/components/KundenGalerie";
 import ProductCard from "@/components/ProductCard";
+import KiBadge from "@/components/KiBadge";
 import { USM_COLORS } from "@/lib/colors";
 import { getShopProducts } from "@/lib/shop";
 
@@ -177,13 +178,14 @@ export default async function Home() {
       </section>
 
       {/* Interlude — volle Breite, ohne Text */}
-      <div className="interlude">
+      <div className="interlude" style={{ position: "relative" }}>
         <img
           src="/media/interlude-tanne.jpg"
           alt="Tannengrünes USM Haller Sideboard in einer verlassenen Galerie"
           loading="lazy"
           className="focus-right"
         />
+        <KiBadge text="KI-generierte Visualisierung" position="links" />
       </div>
 
       {/* Prozess */}
@@ -205,6 +207,7 @@ export default async function Home() {
                   <div className="tile-frame">
                     <div className="media-tile ratio-32">
                       <img src={step.image} alt={step.alt} loading="lazy" />
+                      <KiBadge text="KI-generiert" />
                     </div>
                   </div>
                   <div className="process-step-num tabular">{step.num}</div>

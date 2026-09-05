@@ -61,6 +61,16 @@ export default function ImpressumPage() {
             jeweiligen Inhaber und werden ausschließlich zur Beschreibung der
             angebotenen Originalprodukte verwendet.
           </p>
+          <p style={{ marginTop: "1.2em" }}>
+            <strong>Hinweis zu KI-generierten Inhalten:</strong> Einige Bilder
+            und Videos auf dieser Website wurden mit Unterstützung künstlicher
+            Intelligenz erstellt oder bearbeitet (z.&nbsp;B. Raumszenen und
+            Visualisierungen). Diese Inhalte sind am jeweiligen Bild bzw.
+            Video entsprechend gekennzeichnet. Die dargestellten Möbelstücke
+            entsprechen den tatsächlich angebotenen, aufbereiteten
+            Originalen; Angaben zu Ausstattung und Maßen finden Sie in der
+            jeweiligen Produktbeschreibung.
+          </p>
         </div>
       </div>
     </section>

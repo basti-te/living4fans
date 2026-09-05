@@ -14,6 +14,8 @@ export type ShopProduct = Product & {
   aufAnfrage: boolean;
   /** true = Preis wird angezeigt, aber Verkauf läuft ausschließlich über Anfrage (kein Kaufen-Button) */
   nurAnfrage: boolean;
+  /** true = Produktbilder sind KI-generiert/-inszeniert → Kennzeichnung (Art. 50 EU AI Act) */
+  kiBilder: boolean;
   /** Versandkosten-Override in Cent (klein) bzw. Lieferpauschale (mittel); null = Standard aus Einstellungen */
   versandkosten: number | null;
   farbwahl: boolean;
@@ -94,6 +96,7 @@ type Row = {
   versandkosten_cents: number | null;
   farbwahl: boolean;
   nur_anfrage?: boolean;
+  ki_bilder?: boolean;
   status: "aktiv" | "entwurf" | "verkauft";
   sort: number;
   product_images?: { url: string; sort: number }[];
@@ -127,6 +130,7 @@ function mapRow(r: Row): ShopProduct {
     groesse: r.groesse,
     aufAnfrage: r.preis_cents == null,
     nurAnfrage: Boolean(r.nur_anfrage),
+    kiBilder: Boolean(r.ki_bilder),
     versandkosten: r.versandkosten_cents,
     farbwahl: r.farbwahl,
     photos,
@@ -149,6 +153,7 @@ function mapStatic(p: Product): ShopProduct {
     groesse: fallbackGroesse(p),
     aufAnfrage: false,
     nurAnfrage: false,
+    kiBilder: false,
     versandkosten: null,
     farbwahl: true,
     photos: [],
