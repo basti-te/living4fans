@@ -3,6 +3,8 @@ import Hero from "@/components/Hero";
 import Reveal from "@/components/Reveal";
 import RoomTour from "@/components/RoomTour";
 import KundenGalerie from "@/components/KundenGalerie";
+import ReferenzGalerie from "@/components/ReferenzGalerie";
+import { REFERENZEN } from "@/lib/referenzen";
 import ProductCard from "@/components/ProductCard";
 import KiBadge from "@/components/KiBadge";
 import { USM_COLORS } from "@/lib/colors";
@@ -297,6 +299,25 @@ export default async function Home() {
               Alle Kundenbilder ansehen →
             </Link>
           </div>
+        </div>
+      </section>
+
+      <hr className="hairline" />
+
+      {/* Kundenstimmen — Referenzprojekte mit Fotostrecke */}
+      <section className="section">
+        <div className="container">
+          <Reveal>
+            <span className="eyebrow">Kundenstimmen</span>
+            <h2 className="heading-display mb-68" style={{ maxWidth: "18ch" }}>
+              Das sagen unsere Kunden.
+            </h2>
+          </Reveal>
+          {REFERENZEN.map((referenz) => (
+            <Reveal key={referenz.id}>
+              <ReferenzGalerie referenz={referenz} />
+            </Reveal>
+          ))}
         </div>
       </section>
 
