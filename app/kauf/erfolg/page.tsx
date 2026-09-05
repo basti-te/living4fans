@@ -64,7 +64,7 @@ async function verarbeiteSession(sessionId: string): Promise<{
               `Kunde: ${session.customer_details?.name ?? "—"}\n` +
               `E-Mail: ${session.customer_details?.email ?? "—"}\n` +
               `Telefon: ${session.customer_details?.phone ?? "—"}\n\n` +
-              `Details im Admin: https://living4fans.vercel.app/admin/bestellungen`
+              `Details im Admin: https://www.living4fans.com/admin/bestellungen`
           );
         }
       }

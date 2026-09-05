@@ -56,7 +56,7 @@ export async function POST(req: Request) {
         `Telefon: ${body.telefon || "—"}\nPLZ: ${body.plz || "—"}\n` +
         `Wunschfarbe: ${body.wunschfarbe || "—"}\n\n` +
         `Nachricht:\n${body.nachricht || "—"}\n\n` +
-        `Alle Anfragen im Admin: https://living4fans.vercel.app/admin/anfragen`
+        `Alle Anfragen im Admin: https://www.living4fans.com/admin/anfragen`
     );
   }
   return NextResponse.json({ ok: true });

@@ -99,7 +99,7 @@ export async function POST(req: Request) {
         `Betrag: ${formatCents(betragCents)} (davon Versand ${formatCents(versandCents)})\n\n` +
         `Kunde: ${name}\nE-Mail: ${email}\nTelefon: ${body.telefon ?? "—"}\n\n` +
         `Status: offen — Anfertigung startet nach Zahlungseingang.\n` +
-        `Details im Admin: https://living4fans.vercel.app/admin/bestellungen`
+        `Details im Admin: https://www.living4fans.com/admin/bestellungen`
     );
   }
 

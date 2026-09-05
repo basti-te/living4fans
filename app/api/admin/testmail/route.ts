@@ -17,7 +17,7 @@ export async function POST() {
   const ok = await sendeBenachrichtigung(
     settings.mailEmpfaenger,
     "Test — Living4Fans Shop-Benachrichtigungen",
-    "Diese Test-Mail bestätigt: Die Benachrichtigungen des Living4Fans-Shops sind korrekt eingerichtet.\n\nAdmin: https://living4fans.vercel.app/admin"
+    "Diese Test-Mail bestätigt: Die Benachrichtigungen des Living4Fans-Shops sind korrekt eingerichtet.\n\nAdmin: https://www.living4fans.com/admin"
   );
   if (!ok) {
     return NextResponse.json(
