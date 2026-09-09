@@ -31,7 +31,7 @@ export async function PATCH(
   if (dbError) {
     return NextResponse.json({ error: dbError.message }, { status: 400 });
   }
-  await syncImages(sb, id, photos);
+  await syncImages(sb, id, photos, Boolean(row!.ki_bilder));
   revalidateShop(revalidatePath, data.slug);
   return NextResponse.json({ ok: true });
 }

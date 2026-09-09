@@ -60,16 +60,33 @@ export function productPayload(body: Record<string, unknown>): {
   };
 }
 
-/** Ersetzt die Bilderliste eines Produkts (Reihenfolge = sort). */
+/**
+ * Ersetzt die Bilderliste eines Produkts (Reihenfolge = sort).
+ * Das KI-Flag bekannter URLs bleibt erhalten; neue URLs erben kiDefault
+ * (die „Bilder sind KI-inszeniert"-Checkbox des Produkts).
+ */
 export async function syncImages(
   sb: SupabaseClient,
   productId: string,
-  photos: string[]
+  photos: string[],
+  kiDefault = false
 ): Promise<void> {
+  const { data: bestehend } = await sb
+    .from("product_images")
+    .select("url, ki")
+    .eq("product_id", productId);
+  const kiVon = new Map(
+    (bestehend ?? []).map((z) => [z.url as string, Boolean(z.ki)])
+  );
   await sb.from("product_images").delete().eq("product_id", productId);
   if (photos.length) {
     await sb.from("product_images").insert(
-      photos.map((url, i) => ({ product_id: productId, url, sort: i }))
+      photos.map((url, i) => ({
+        product_id: productId,
+        url,
+        sort: i,
+        ki: kiVon.has(url) ? kiVon.get(url) : kiDefault,
+      }))
     );
   }
 }

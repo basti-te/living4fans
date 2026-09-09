@@ -68,7 +68,9 @@ export default function ProduktForm({ product }: { product?: ShopProduct }) {
   const [nurAnfrage, setNurAnfrage] = useState(product?.nurAnfrage ?? false);
   const [kiBilder, setKiBilder] = useState(product?.kiBilder ?? false);
   const [status, setStatus] = useState(product?.status ?? "entwurf");
-  const [photos, setPhotos] = useState<string[]>(product?.photos ?? []);
+  const [photos, setPhotos] = useState<string[]>(
+    product?.photos.map((p) => p.src) ?? []
+  );
   const [uploading, setUploading] = useState(false);
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);

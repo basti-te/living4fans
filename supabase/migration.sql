@@ -248,3 +248,14 @@ alter table products add column if not exists nur_anfrage boolean not null defau
 -- ——— Migration 4: KI-Bild-Kennzeichnung (bereits eingespielt) ———
 alter table products add column if not exists ki_bilder boolean not null default false;
 update products set ki_bilder = true where id in (select distinct product_id from product_images where url like '/media/produkte/%');
+
+-- ——— Migration 5: KI-Kennzeichnung pro Bild (09.09., bereits eingespielt) ———
+-- Die Kleinanzeigen-Bildsätze mischen echte Fotos, KI-Inszenierungen und
+-- Konfigurator-Renders → Kennzeichnung wandert vom Produkt auf das einzelne Bild.
+-- products.ki_bilder dient seither nur noch als Default für neu hochgeladene Bilder.
+alter table product_images add column if not exists ki boolean not null default false;
+-- Datenstand 09.09.: alle 27 Kleinanzeigen-Produkte mit kompletten Anzeigen-Galerien
+-- neu befüllt (367 Bilder, /media/produkte/<slug>-NN.jpg, Reihenfolge = Anzeige);
+-- 111 Bilder nach Sichtprüfung als ki=true markiert; products.ki_bilder überall false;
+-- sideboard-2600/-3950 aktiviert; lowboard-tv-1234 nur_anfrage (Anzeigenpreis ist VB);
+-- Sideboard-Namen unterscheidbar gemacht, fehlende Maße aus den Anzeigen ergänzt.

@@ -98,10 +98,10 @@ export default function ProductConfigurator({
           {hatFotos ? (
             <div className="media-tile" style={{ aspectRatio: "4 / 3" }}>
               <img
-                src={product.photos[photoIndex]}
+                src={product.photos[photoIndex].src}
                 alt={`${product.name} — Foto ${photoIndex + 1}`}
               />
-              {product.kiBilder ? <KiBadge text="KI-inszeniert" /> : null}
+              {product.photos[photoIndex].ki ? <KiBadge text="KI-inszeniert" /> : null}
             </div>
           ) : hatRender ? (
             <SceneTile
@@ -122,14 +122,14 @@ export default function ProductConfigurator({
         </div>
         {hatFotos && product.photos.length > 1 ? (
           <div className="pdp-thumbs">
-            {product.photos.map((url, i) => (
+            {product.photos.map((foto, i) => (
               <button
-                key={url}
+                key={foto.src}
                 className={`pdp-thumb ${i === photoIndex ? "is-active" : ""}`}
                 onClick={() => setPhotoIndex(i)}
                 aria-label={`Foto ${i + 1} anzeigen`}
               >
-                <img src={url} alt="" loading="lazy" />
+                <img src={foto.src} alt="" loading="lazy" />
               </button>
             ))}
           </div>
@@ -140,9 +140,9 @@ export default function ProductConfigurator({
         >
           <span>
             {hatFotos
-              ? product.kiBilder
-                ? "Basisvariante — Beispielbilder, Umgebung KI-inszeniert"
-                : "Basisvariante — Beispielfotos"
+              ? product.photos[photoIndex].ki
+                ? "Beispielbild — Umgebung KI-inszeniert"
+                : "Originalfoto"
               : `Illustration — Konfiguration ${color.name}`}
           </span>
           {product.farbwahl ? <span>{color.ral}</span> : null}

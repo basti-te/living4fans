@@ -16,10 +16,13 @@ export type ShopProduct = Product & {
   nurAnfrage: boolean;
   /** true = Produktbilder sind KI-generiert/-inszeniert → Kennzeichnung (Art. 50 EU AI Act) */
   kiBilder: boolean;
+  /** KI-Flag des Bildes, das die Produktkarte zeigt (render-Fallback: kiBilder) */
+  imageKi: boolean;
   /** Versandkosten-Override in Cent (klein) bzw. Lieferpauschale (mittel); null = Standard aus Einstellungen */
   versandkosten: number | null;
   farbwahl: boolean;
-  photos: string[];
+  /** Galerie-Fotos in Sortierreihenfolge; ki = Bild ist KI-generiert/-inszeniert */
+  photos: { src: string; ki: boolean }[];
   status: "aktiv" | "entwurf" | "verkauft";
 };
 
@@ -99,7 +102,7 @@ type Row = {
   ki_bilder?: boolean;
   status: "aktiv" | "entwurf" | "verkauft";
   sort: number;
-  product_images?: { url: string; sort: number }[];
+  product_images?: { url: string; sort: number; ki?: boolean }[];
 };
 
 function mapRow(r: Row): ShopProduct {
@@ -107,13 +110,13 @@ function mapRow(r: Row): ShopProduct {
   const photos = (r.product_images ?? [])
     .slice()
     .sort((a, b) => a.sort - b.sort)
-    .map((i) => i.url);
+    .map((i) => ({ src: i.url, ki: Boolean(i.ki) }));
   return {
     slug: r.slug,
     name: r.name,
     signature: render.signature,
     ort: render.ort,
-    image: render.image ?? photos[0],
+    image: render.image ?? photos[0]?.src,
     category: r.kategorie,
     categoryLabel: r.kategorie_label,
     grid: render.grid ?? [],
@@ -131,6 +134,7 @@ function mapRow(r: Row): ShopProduct {
     aufAnfrage: r.preis_cents == null,
     nurAnfrage: Boolean(r.nur_anfrage),
     kiBilder: Boolean(r.ki_bilder),
+    imageKi: render.image ? Boolean(r.ki_bilder) : Boolean(photos[0]?.ki),
     versandkosten: r.versandkosten_cents,
     farbwahl: r.farbwahl,
     photos,
@@ -154,6 +158,7 @@ function mapStatic(p: Product): ShopProduct {
     aufAnfrage: false,
     nurAnfrage: false,
     kiBilder: false,
+    imageKi: false,
     versandkosten: null,
     farbwahl: true,
     photos: [],
@@ -163,7 +168,7 @@ function mapStatic(p: Product): ShopProduct {
 
 /* ——— Abfragen ——— */
 
-const SELECT = "*, product_images(url, sort)";
+const SELECT = "*, product_images(url, sort, ki)";
 
 export async function getShopProducts(): Promise<ShopProduct[]> {
   if (!supabaseConfigured) return PRODUCTS.map(mapStatic);

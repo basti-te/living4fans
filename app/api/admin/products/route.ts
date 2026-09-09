@@ -26,7 +26,7 @@ export async function POST(req: Request) {
   if (dbError) {
     return NextResponse.json({ error: dbError.message }, { status: 400 });
   }
-  await syncImages(sb, data.id, photos);
+  await syncImages(sb, data.id, photos, Boolean(row!.ki_bilder));
   revalidateShop(revalidatePath, data.slug);
   return NextResponse.json({ ok: true, id: data.id });
 }
