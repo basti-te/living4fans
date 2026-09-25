@@ -7,7 +7,7 @@ import { getColor } from "@/lib/colors";
 export const metadata: Metadata = {
   title: "Konzept",
   description:
-    "Warum aufbereitete USM Haller Möbel die bessere Wahl sind: Handwerk, Nachhaltigkeit und individuelle Pulverbeschichtung bei Living4Fans.",
+    "Warum aufbereitete Möbelklassiker die bessere Wahl sind: Handwerk, Nachhaltigkeit und individuelle Pulverbeschichtung bei Living4Fans.",
 };
 
 export default function KonzeptPage() {
@@ -17,7 +17,7 @@ export default function KonzeptPage() {
         <div className="container">
           <span className="eyebrow">Unser Konzept</span>
           <h1 className="heading-display" style={{ maxWidth: "24ch" }}>
-            Wir bauen keine Möbel. Wir geben Originalen ihr zweites Leben.
+            Wir bauen keine Möbel. Wir geben Klassikern ihr zweites Leben.
           </h1>
         </div>
       </section>
@@ -32,15 +32,15 @@ export default function KonzeptPage() {
             </Reveal>
             <Reveal delay={100}>
               <p className="body-copy">
-                1963 entwickelte Fritz Haller für die Firma USM ein modulares
-                Baukastensystem aus verchromten Stahlrohren, Verbindungskugeln
-                und pulverbeschichteten Metallflächen. Sechzig Jahre später
+                In den 1960er-Jahren entstand ein modulares Baukastensystem
+                aus verchromten Stahlrohren, Verbindungskugeln und
+                pulverbeschichteten Metallflächen. Sechzig Jahre später
                 steht es in Museen — und in Millionen Büros und Wohnungen.
               </p>
               <p className="body-copy">
                 Das Besondere: Jedes Element lässt sich zerstörungsfrei
-                zerlegen, umbauen und neu beschichten. Ein USM Haller
-                Möbelstück ist damit das vielleicht nachhaltigste Möbelstück,
+                zerlegen, umbauen und neu beschichten. Ein solcher
+                Möbelklassiker ist damit das vielleicht nachhaltigste Möbelstück,
                 das je gebaut wurde — vorausgesetzt, jemand kümmert sich
                 darum. Das ist unsere Arbeit.
               </p>
@@ -118,7 +118,7 @@ export default function KonzeptPage() {
                 Farbton trägt, den Sie gewählt haben.
               </p>
               <p className="body-copy">
-                Die Mechanik überholen wir mit Originalersatzteilen: neue
+                Die Mechanik überholen wir mit passenden Ersatzteilen: neue
                 Dämpfer für Klapptüren, neue Auszugsschienen, neue Gleiter.
                 Was Sie erhalten, funktioniert wie am ersten Tag — mit der
                 Patina von null und der Geschichte von Jahrzehnten.

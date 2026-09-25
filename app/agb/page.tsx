@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "AGB",
   description:
-    "Allgemeine Geschäftsbedingungen mit Kundeninformationen von Living4Fans — Verkauf aufbereiteter USM Haller Möbelstücke.",
+    "Allgemeine Geschäftsbedingungen mit Kundeninformationen von Living4Fans — Verkauf aufbereiteter Möbelstücke.",
 };
 
 export default function AgbPage() {

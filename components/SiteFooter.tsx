@@ -11,9 +11,9 @@ export default function SiteFooter() {
           <div className="footer-col">
             <span className="label">Atelier</span>
             <p className="body-copy" style={{ fontSize: 15 }}>
-              Aufbereitung und Neubeschichtung originaler USM Haller Möbel.
-              Ankauf, Verkauf und individuelle Konfiguration — Versand und
-              Lieferung innerhalb Deutschlands.
+              Aufbereitung und Neubeschichtung gebrauchter Möbelklassiker.
+              Ankauf, Verkauf und Beratung — Versand und Lieferung innerhalb
+              Deutschlands.
             </p>
           </div>
           <div className="footer-col">

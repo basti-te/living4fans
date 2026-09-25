@@ -4,7 +4,7 @@ export default function RoomTour() {
   return (
     <section
       className="roomtour"
-      aria-label="Rundgang durch ein Haus: vier Räume mit aufbereiteten USM Haller Möbelstücken"
+      aria-label="Rundgang durch ein Haus: vier Räume mit aufbereiteten Möbelklassikern"
     >
       <div className="roomtour-stage">
         <video
@@ -29,8 +29,8 @@ export default function RoomTour() {
       <div className="seq-caption">
         <span className="label tabular">Rundgang</span>
         <p>
-          Raum für Raum, eine Handschrift — aufbereitete USM Haller
-          Möbelstücke prägen jede Bühne. Jedes Stück ein Original in Ihrer
+          Raum für Raum, eine Handschrift — aufbereitete Möbelklassiker
+          prägen jede Bühne. Jedes Stück ein Einzelstück in Ihrer
           Wunschfarbe.
         </p>
       </div>

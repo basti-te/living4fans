@@ -7,7 +7,7 @@ import KiBadge from "@/components/KiBadge";
 export const metadata: Metadata = {
   title: "Über uns",
   description:
-    "Living4Fans ist ein Familienunternehmen aus Steinfeld (Oldb.): Alesja Schonhöft bereitet mit ihrem Mann Stephan USM Haller Möbelstücke auf — bis zur Maßanfertigung.",
+    "Living4Fans ist ein Familienunternehmen aus Steinfeld (Oldb.): Alesja Schonhöft bereitet mit ihrem Mann Stephan gebrauchte Möbelklassiker auf.",
 };
 
 export default function UeberUnsPage() {
@@ -27,7 +27,7 @@ export default function UeberUnsPage() {
                   <div className="tile-frame">
                     <img
                       src="/media/alesja-lager.jpg"
-                      alt="Alesja Schonhöft im Living4Fans Lager zwischen USM Haller Möbelstücken"
+                      alt="Alesja Schonhöft im Living4Fans Lager zwischen aufbereiteten Möbelklassikern"
                       style={{ display: "block", width: "100%" }}
                     />
                     <KiBadge text="Aufnahme KI-bearbeitet" />
@@ -61,7 +61,7 @@ export default function UeberUnsPage() {
                   Living4Fans ist ein Familienunternehmen aus Steinfeld
                   (Oldenburg) — und die Idee von Alesja Schonhöft. Gemeinsam
                   mit ihrem Mann Stephan hat sie das Konzept entwickelt:
-                  gebrauchte USM Haller Möbelstücke finden, vollständig
+                  gebrauchte Möbelklassiker finden, vollständig
                   zerlegen, professionell aufbereiten und in der Wunschfarbe
                   neu pulverbeschichten. Aus der Überzeugung, dass ein so
                   gutes System kein zweites Mal gebaut werden muss — sondern
@@ -79,7 +79,7 @@ export default function UeberUnsPage() {
                   haben, gehört eine fast vier Meter hohe Wohnwand — mit
                   Fächern für Gitarre, Pflanzen und alles, was dort ein
                   Zuhause finden sollte. Was Sie sich vorstellen können,
-                  bauen wir. So einfach ist der Anspruch.
+                  besprechen wir gern gemeinsam.
                 </p>
                 <div style={{ marginTop: 40, display: "flex", gap: 14, flexWrap: "wrap" }}>
                   <Link href="/kontakt" className="btn-filled">
@@ -121,7 +121,7 @@ export default function UeberUnsPage() {
             </h2>
             <p className="body-copy mb-68">
               Aus Wohnzimmern, Fluren, Praxen und Büros: So leben unsere
-              aufbereiteten Originale weiter. Vielen Dank an alle, die uns
+              aufbereiteten Möbelstücke weiter. Vielen Dank an alle, die uns
               ihre Bilder schicken.
             </p>
           </Reveal>

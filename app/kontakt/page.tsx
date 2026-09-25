@@ -6,7 +6,7 @@ import { WHATSAPP_LINK } from "@/lib/whatsapp";
 export const metadata: Metadata = {
   title: "Kontakt",
   description:
-    "Anfrage, Beratung oder Ankauf: Kontaktieren Sie Living4Fans — Ihre Werkstatt für aufbereitete USM Haller Möbel in Wunschfarbe.",
+    "Anfrage, Beratung oder Ankauf: Kontaktieren Sie Living4Fans — Ihre Werkstatt für aufbereitete Möbelklassiker in Wunschfarbe.",
 };
 
 export default function KontaktPage() {

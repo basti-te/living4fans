@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Widerrufsbelehrung",
   description:
-    "Widerrufsbelehrung und Muster-Widerrufsformular von Living4Fans — Ihre Rechte beim Kauf aufbereiteter USM Haller Möbelstücke.",
+    "Widerrufsbelehrung und Muster-Widerrufsformular von Living4Fans — Ihre Rechte beim Kauf aufbereiteter Möbelstücke.",
 };
 
 const formLine = {
@@ -51,7 +51,7 @@ export default function WiderrufPage() {
             Widerrufsfrist absenden.
           </p>
           <p style={{ marginTop: "0.6em" }}>
-            Bitte beachten Sie: Alle Möbel mit USM Haller Bauteilen werden
+            Bitte beachten Sie: Alle Möbelstücke werden
             individuell einschließlich Farbwahl auf Kundenbestellung/
             Kundenwunsch in unserer Werkstatt oder vor Ort beim Kunden
             montiert. Wir weisen ausdrücklich darauf hin, dass die Möbel denen

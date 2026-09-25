@@ -18,6 +18,7 @@ const KEY_TYPES: Record<string, "number" | "string" | "boolean"> = {
   mail_empfaenger: "string",
   mail_bei_bestellung: "boolean",
   mail_bei_anfrage: "boolean",
+  preise_anzeigen: "boolean",
 };
 
 export async function PATCH(req: Request) {

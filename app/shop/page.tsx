@@ -8,7 +8,7 @@ export const revalidate = 60;
 export const metadata: Metadata = {
   title: "Shop",
   description:
-    "Aufbereitete USM Haller Sideboards, Highboards, Regale und Container — neu pulverbeschichtet in Ihrer Wunschfarbe.",
+    "Aufbereitete Sideboards, Highboards, Regale und Container — neu pulverbeschichtet in Ihrer Wunschfarbe.",
 };
 
 export default async function ShopPage() {
@@ -19,7 +19,7 @@ export default async function ShopPage() {
         <div className="container">
           <span className="eyebrow">Shop</span>
           <h1 className="heading-display" style={{ maxWidth: "18ch" }}>
-            Aufbereitete Originale
+            Aufbereitete Klassiker
           </h1>
           <p className="body-copy mt-40">
             Jedes Möbelstück wird nach Ihrer Bestellung final konfiguriert und in

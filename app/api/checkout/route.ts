@@ -63,7 +63,7 @@ export async function POST(req: Request) {
           unit_amount: preisCents,
           product_data: {
             name: farbe ? `${product.name} — ${farbe.name} (${farbe.ral})` : product.name,
-            description: "Aufbereitetes USM Haller Original, Anfertigung nach Zahlungseingang",
+            description: "Aufbereitetes Möbelstück, Anfertigung nach Zahlungseingang",
           },
         },
       },

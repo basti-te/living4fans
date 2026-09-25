@@ -18,6 +18,7 @@ export default function ZahlungenForm({
   const [kontoinhaber, setKontoinhaber] = useState(settings.bankKontoinhaber);
   const [iban, setIban] = useState(settings.bankIban);
   const [paypalEmpfaenger, setPaypalEmpfaenger] = useState(settings.paypalEmpfaenger);
+  const [preise, setPreise] = useState(settings.preiseAnzeigen);
   const [busy, setBusy] = useState(false);
   const [saved, setSaved] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -38,6 +39,7 @@ export default function ZahlungenForm({
           bank_kontoinhaber: kontoinhaber.trim(),
           bank_iban: iban.trim(),
           paypal_empfaenger: paypalEmpfaenger.trim(),
+          preise_anzeigen: preise,
         }),
       });
       const data = await res.json();
@@ -85,6 +87,21 @@ export default function ZahlungenForm({
             </span>
           </label>
         </div>
+      </div>
+
+      <div className="form-field">
+        <span className="label">Preise im Shop</span>
+        <label style={toggleStil}>
+          <input type="checkbox" checked={preise} onChange={(e) => setPreise(e.target.checked)} style={{ marginTop: 4 }} />
+          <span>
+            <strong>Preise öffentlich anzeigen</strong>
+            <br />
+            <span className="caption meta" style={{ textTransform: "none", letterSpacing: 0 }}>
+              Ausgeschaltet zeigt der Shop überall „Preis auf Anfrage" und
+              blendet alle Kauf-Buttons aus (Defensiv-Modus).
+            </span>
+          </span>
+        </label>
       </div>
 
       <div className="form-field">

@@ -41,6 +41,8 @@ export type ShopSettings = {
   mailEmpfaenger: string;
   mailBeiBestellung: boolean;
   mailBeiAnfrage: boolean;
+  /** false = öffentlich keine Preise zeigen, alles „Preis auf Anfrage" (Defensiv-Modus) */
+  preiseAnzeigen: boolean;
 };
 
 export const DEFAULT_SETTINGS: ShopSettings = {
@@ -58,6 +60,7 @@ export const DEFAULT_SETTINGS: ShopSettings = {
   mailEmpfaenger: "living4fans@web.de",
   mailBeiBestellung: true,
   mailBeiAnfrage: true,
+  preiseAnzeigen: true,
 };
 
 export const GROESSE_LABELS: Record<Groesse, string> = {
@@ -170,6 +173,19 @@ function mapStatic(p: Product): ShopProduct {
 
 const SELECT = "*, product_images(url, sort, ki)";
 
+/** Defensiv-Modus: ohne öffentliche Preise wird jedes Stück als „Preis auf Anfrage" behandelt. */
+async function ohnePreiseFalls<T extends ShopProduct | null>(p: T): Promise<T>;
+async function ohnePreiseFalls(p: ShopProduct[]): Promise<ShopProduct[]>;
+async function ohnePreiseFalls(
+  p: ShopProduct | ShopProduct[] | null
+): Promise<ShopProduct | ShopProduct[] | null> {
+  if (p === null) return null;
+  const settings = await getSettings();
+  if (settings.preiseAnzeigen) return p;
+  const verstecken = (x: ShopProduct): ShopProduct => ({ ...x, aufAnfrage: true });
+  return Array.isArray(p) ? p.map(verstecken) : verstecken(p);
+}
+
 export async function getShopProducts(): Promise<ShopProduct[]> {
   if (!supabaseConfigured) return PRODUCTS.map(mapStatic);
   const sb = publicClient();
@@ -181,7 +197,7 @@ export async function getShopProducts(): Promise<ShopProduct[]> {
     .order("sort", { ascending: true })
     .order("created_at", { ascending: false });
   if (error || !data) return PRODUCTS.map(mapStatic);
-  return (data as Row[]).map(mapRow);
+  return ohnePreiseFalls((data as Row[]).map(mapRow));
 }
 
 export async function getShopProduct(slug: string): Promise<ShopProduct | null> {
@@ -197,7 +213,7 @@ export async function getShopProduct(slug: string): Promise<ShopProduct | null> 
     .eq("slug", slug)
     .eq("status", "aktiv")
     .maybeSingle();
-  return data ? mapRow(data as Row) : null;
+  return ohnePreiseFalls(data ? mapRow(data as Row) : null);
 }
 
 /** Alle Produkte inkl. Entwürfe — nur für den Admin-Bereich (Service-Role). */
@@ -243,6 +259,7 @@ export async function getSettings(): Promise<ShopSettings> {
     mailEmpfaenger: String(map.mail_empfaenger ?? DEFAULT_SETTINGS.mailEmpfaenger),
     mailBeiBestellung: bool(map.mail_bei_bestellung, DEFAULT_SETTINGS.mailBeiBestellung),
     mailBeiAnfrage: bool(map.mail_bei_anfrage, DEFAULT_SETTINGS.mailBeiAnfrage),
+    preiseAnzeigen: bool(map.preise_anzeigen, DEFAULT_SETTINGS.preiseAnzeigen),
   };
 }
 

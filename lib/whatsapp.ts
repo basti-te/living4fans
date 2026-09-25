@@ -2,5 +2,5 @@
 export const WHATSAPP_LINK =
   "https://wa.me/491788319818?text=" +
   encodeURIComponent(
-    "Hallo Living4Fans, ich interessiere mich für ein USM Haller Möbelstück."
+    "Hallo Living4Fans, ich interessiere mich für ein Möbelstück aus eurem Bestand."
   );

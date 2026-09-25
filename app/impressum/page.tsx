@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Impressum",
   description:
-    "Impressum von Living4Fans — Alesja Schonhöft, Steinfeld. Aufbereitung und Verkauf originaler USM Haller Möbelstücke.",
+    "Impressum von Living4Fans — Alesja Schonhöft, Steinfeld. Aufbereitung und Verkauf gebrauchter Möbelklassiker.",
 };
 
 export default function ImpressumPage() {
@@ -58,8 +58,8 @@ export default function ImpressumPage() {
             Living4Fans ist ein unabhängiger Anbieter für aufbereitete
             Gebrauchtmöbel und steht in keiner geschäftlichen Verbindung zur
             USM U. Schärer Söhne AG. „USM" und „USM Haller" sind Marken ihrer
-            jeweiligen Inhaber und werden ausschließlich zur Beschreibung der
-            angebotenen Originalprodukte verwendet.
+            jeweiligen Inhaber; eine etwaige Nennung dient allein der
+            beschreibenden Bezugnahme auf gebrauchte Produkte.
           </p>
           <p style={{ marginTop: "1.2em" }}>
             <strong>Hinweis zu KI-generierten Inhalten:</strong> Einige Bilder
@@ -68,7 +68,7 @@ export default function ImpressumPage() {
             Visualisierungen). Diese Inhalte sind am jeweiligen Bild bzw.
             Video entsprechend gekennzeichnet. Die dargestellten Möbelstücke
             entsprechen den tatsächlich angebotenen, aufbereiteten
-            Originalen; Angaben zu Ausstattung und Maßen finden Sie in der
+            Stücken; Angaben zu Ausstattung und Maßen finden Sie in der
             jeweiligen Produktbeschreibung.
           </p>
         </div>

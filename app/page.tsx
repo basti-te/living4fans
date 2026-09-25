@@ -28,7 +28,7 @@ const PROCESS = [
   {
     num: "03",
     title: "Pulverbeschichtung",
-    text: "Elektrostatisch aufgetragen, in Ihrer Wunschfarbe: eine der klassischen USM-Farben oder jeder RAL-Ton.",
+    text: "Elektrostatisch aufgetragen, in Ihrer Wunschfarbe: ein zeitloser Klassiker oder jeder RAL-Ton.",
     image: "/media/prozess-3.jpg",
     alt: "Feiner enzianblauer Pulvernebel legt sich auf ein Stahltablar",
   },
@@ -67,7 +67,7 @@ export default async function Home() {
           <Reveal>
             <span className="eyebrow">Unser Versprechen</span>
             <h2 className="heading-display">
-              Jedes Möbelstück ein Original. Aufbereitet in Handarbeit. Neu
+              Jedes Möbelstück ein Einzelstück. Aufbereitet in Handarbeit. Neu
               beschichtet in Ihrer Wunschfarbe.
             </h2>
           </Reveal>
@@ -80,7 +80,7 @@ export default async function Home() {
       {/* Aus dem Bestand */}
       <section className="section" style={{ paddingTop: 40 }}>
         <div className="display-deco-wrap" aria-hidden="true">
-          <div className="display-deco">Originale</div>
+          <div className="display-deco">Bestand</div>
         </div>
         <div className="container" style={{ marginTop: 56 }}>
           <Reveal>
@@ -108,8 +108,8 @@ export default async function Home() {
           <Reveal delay={80}>
             <p className="body-copy mb-68">
               Vom Beistelltisch bis zur Kücheninsel: Diese Möbelstücke stehen
-              aufbereitet bei uns in Steinfeld — jedes ein Original, jedes in
-              jeder USM- oder RAL-Farbe bestellbar.
+              aufbereitet bei uns in Steinfeld — jedes ein Einzelstück, jedes
+              in Ihrer RAL-Wunschfarbe erhältlich.
             </p>
           </Reveal>
           <div className="product-grid">
@@ -157,10 +157,10 @@ export default async function Home() {
             </Reveal>
             <Reveal delay={120}>
               <p className="body-copy">
-                Ein USM Haller Möbelstück ist auf Jahrzehnte gebaut. Das verchromte
+                Ein guter Möbelklassiker ist auf Jahrzehnte gebaut. Das verchromte
                 Stahlrohrgestell überdauert Moden, Umzüge und Generationen —
                 nur die Oberflächen tragen die Spuren der Zeit. Genau dort
-                setzen wir an: Statt neu zu produzieren, geben wir originalen
+                setzen wir an: Statt neu zu produzieren, geben wir gebrauchten
                 Möbeln ein zweites Leben.
               </p>
               <p className="body-copy">
@@ -183,7 +183,7 @@ export default async function Home() {
       <div className="interlude" style={{ position: "relative" }}>
         <img
           src="/media/interlude-tanne.jpg"
-          alt="Tannengrünes USM Haller Sideboard in einer verlassenen Galerie"
+          alt="Tannengrünes Sideboard in einer verlassenen Galerie"
           loading="lazy"
           className="focus-right"
         />
@@ -238,7 +238,7 @@ export default async function Home() {
           </Reveal>
           <Reveal delay={100}>
             <p className="body-copy mt-40">
-              Die klassische USM-Farbwelt ist der Ausgangspunkt — nicht die
+              Die klassische Farbwelt ist der Ausgangspunkt — nicht die
               Grenze. In unserer Pulverbeschichtung realisieren wir jede
               RAL-Farbe: vom zurückhaltenden Kieselgrau bis zum leuchtenden
               Verkehrsrot. Matt, seidenmatt oder feinstrukturiert.
@@ -329,7 +329,7 @@ export default async function Home() {
           <Reveal>
             <span className="eyebrow">Ihr Möbelstück, Ihre Farbe</span>
             <h2 className="heading-display" style={{ maxWidth: "22ch" }}>
-              Sie haben ein USM Haller Möbelstück — oder wünschen sich eines?
+              Sie haben einen modularen Möbelklassiker — oder wünschen sich einen?
             </h2>
             <p className="body-copy mt-40">
               Wir kaufen gebrauchte Möbel an, bereiten Ihr eigenes Stück in

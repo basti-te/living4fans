@@ -14,11 +14,11 @@ const archivo = Archivo({
 
 export const metadata: Metadata = {
   title: {
-    default: "Living4Fans — Aufbereitete USM Haller Möbel in Wunschfarbe",
+    default: "Living4Fans — Aufbereitete Möbelklassiker in Wunschfarbe",
     template: "%s — Living4Fans",
   },
   description:
-    "Living4Fans bereitet originale USM Haller Möbel in Handarbeit auf und pulverbeschichtet sie neu — in jeder RAL-Wunschfarbe. Sideboards, Highboards, Regale und Container — Versand und Lieferung innerhalb Deutschlands.",
+    "Living4Fans bereitet gebrauchte Möbelklassiker in Handarbeit auf und pulverbeschichtet sie neu — in jeder RAL-Wunschfarbe. Sideboards, Highboards, Regale und Container — Versand und Lieferung innerhalb Deutschlands.",
 };
 
 export const viewport: Viewport = {

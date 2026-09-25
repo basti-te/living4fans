@@ -176,7 +176,7 @@ export default function ProduktForm({ product }: { product?: ShopProduct }) {
             setName(e.target.value);
             if (!slugTouched) setSlug(slugify(e.target.value));
           }}
-          placeholder="z. B. USM Haller Sideboard"
+          placeholder="z. B. Sideboard 3×2"
           required
         />
       </div>
