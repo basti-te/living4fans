@@ -1658,3 +1658,29 @@ select {
     grid-template-columns: 1fr;
   }
 }
+
+/* ——— Hinweis-Banner (Betriebsferien o. ä.) ——— */
+.hinweis-banner {
+  background: var(--walnut);
+  color: var(--linen);
+  text-align: center;
+  padding: 12px var(--page-pad);
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  line-height: 1.5;
+}
+.hinweis-banner strong {
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  margin-right: 12px;
+}
+.hinweis-banner-detail {
+  opacity: 0.85;
+}
+@media (max-width: 760px) {
+  .hinweis-banner strong {
+    display: block;
+    margin-right: 0;
+  }
+}
