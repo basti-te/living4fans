@@ -1,7 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Archivo } from "next/font/google";
 import SiteHeader from "@/components/SiteHeader";
-import HinweisBanner from "@/components/HinweisBanner";
 import SiteFooter from "@/components/SiteFooter";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import "./globals.css";
@@ -32,7 +31,6 @@ export default function RootLayout({
   return (
     <html lang="de" className={archivo.variable}>
       <body>
-        <HinweisBanner />
         <SiteHeader />
         <main>{children}</main>
         <SiteFooter />
