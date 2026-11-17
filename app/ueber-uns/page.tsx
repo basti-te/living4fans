@@ -63,9 +63,9 @@ export default function UeberUnsPage() {
                   mit ihrem Mann Stephan hat sie das Konzept entwickelt:
                   gebrauchte Möbelklassiker finden, vollständig
                   zerlegen, professionell aufbereiten und in der Wunschfarbe
-                  neu pulverbeschichten. Aus der Überzeugung, dass ein so
-                  gutes System kein zweites Mal gebaut werden muss — sondern
-                  ein zweites Leben verdient.
+                  neu pulverbeschichten. Aus der Überzeugung, dass so gut
+                  gebaute Möbel kein zweites Mal gebaut werden müssen —
+                  sondern ein zweites Leben verdienen.
                 </p>
                 <p className="body-copy" style={{ marginTop: "1.2em" }}>
                   Seit dem Start im Frühjahr 2025 führt Alesja das

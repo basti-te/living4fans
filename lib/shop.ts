@@ -51,16 +51,16 @@ export const DEFAULT_SETTINGS: ShopSettings = {
   radiusKm: 100,
   grossSchwelleCents: 250000,
   plzZentrum: "49439",
-  zahlungStripe: true,
-  zahlungVorkasse: true,
-  zahlungPaypal: true,
+  zahlungStripe: false,
+  zahlungVorkasse: false,
+  zahlungPaypal: false,
   bankKontoinhaber: "Alesja Schonhöft",
   bankIban: "",
   paypalEmpfaenger: "living4fans@web.de",
   mailEmpfaenger: "living4fans@web.de",
   mailBeiBestellung: true,
   mailBeiAnfrage: true,
-  preiseAnzeigen: true,
+  preiseAnzeigen: false,
 };
 
 export const GROESSE_LABELS: Record<Groesse, string> = {

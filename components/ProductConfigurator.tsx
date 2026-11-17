@@ -110,7 +110,7 @@ export default function ProductConfigurator({
               wall={product.wall}
               cellW={product.cellW}
               cellH={product.cellH}
-              casters={product.slug === "haller-rollcontainer"}
+              casters={product.slug === "rollcontainer"}
               scale={product.grid[0].length >= 4 ? 0.86 : product.grid[0].length >= 3 ? 0.8 : 0.52}
               aspect="4 / 3"
             />

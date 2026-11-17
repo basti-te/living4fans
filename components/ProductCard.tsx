@@ -41,7 +41,7 @@ export default function ProductCard({
             wall={product.wall}
             cellW={product.cellW}
             cellH={product.cellH}
-            casters={product.slug === "haller-rollcontainer"}
+            casters={product.slug === "rollcontainer"}
             scale={product.grid[0].length >= 4 ? 0.85 : product.grid[0].length >= 3 ? 0.8 : 0.55}
             aspect="4 / 5"
           />

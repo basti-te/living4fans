@@ -34,8 +34,8 @@ export const CATEGORIES = [
 
 export const PRODUCTS: Product[] = [
   {
-    slug: "haller-sideboard-m",
-    name: "Haller Sideboard M",
+    slug: "sideboard-m",
+    name: "Sideboard M",
     signature: "Enzian",
     ort: "Orangerie",
     image: "/media/tile-enzian.jpg",
@@ -54,7 +54,7 @@ export const PRODUCTS: Product[] = [
     teaser:
       "Der Klassiker fürs Wohnzimmer: drei offene Fächer, drei Klapptüren, endlos viel Ruhe.",
     description:
-      "Das dreireihige Sideboard ist die vielleicht bekannteste Konfiguration des USM Haller Systems. Unsere aufbereiteten Exemplare stammen aus Büroauflösungen und Privathaushalten, werden vollständig zerlegt, gereinigt und mit neuen Kugeln, Rohren und Nivellierfüßen wieder aufgebaut. Alle Tablare und Klapptüren werden neu pulverbeschichtet — in einer klassischen USM-Farbe oder Ihrer RAL-Wunschfarbe.",
+      "Das dreireihige Sideboard ist unsere beliebteste Konfiguration. Unsere aufbereiteten Exemplare stammen aus Büroauflösungen und Privathaushalten, werden vollständig zerlegt, gereinigt und mit neuen Kugeln, Rohren und Nivellierfüßen wieder aufgebaut. Alle Tablare und Klapptüren werden neu pulverbeschichtet — in einem zeitlosen Klassiker-Ton oder Ihrer RAL-Wunschfarbe.",
     details: [
       "Vollständig zerlegt, gereinigt und neu montiert",
       "Neubeschichtung aller Flächen in Wunschfarbe",
@@ -64,8 +64,8 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "haller-lowboard-tv",
-    name: "Haller Lowboard",
+    slug: "lowboard-tv",
+    name: "Lowboard",
     signature: "Tanne",
     ort: "Galerie",
     image: "/media/tile-tanne.jpg",
@@ -94,8 +94,8 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "haller-highboard-l",
-    name: "Haller Highboard L",
+    slug: "highboard-l",
+    name: "Highboard L",
     signature: "Rubin",
     ort: "Fabriketage",
     image: "/media/tile-rubin.jpg",
@@ -127,8 +127,8 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "haller-rollcontainer",
-    name: "Haller Rollcontainer",
+    slug: "rollcontainer",
+    name: "Rollcontainer",
     signature: "Gold",
     ort: "Atelier",
     image: "/media/tile-gold.jpg",
@@ -158,8 +158,8 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "haller-regal-atelier",
-    name: "Haller Regal Atelier",
+    slug: "regal-atelier",
+    name: "Regal Atelier",
     signature: "Kreide",
     ort: "Altbau",
     image: "/media/tile-kreide.jpg",
@@ -179,7 +179,7 @@ export const PRODUCTS: Product[] = [
     teaser:
       "Sechs offene Fächer für Bücher, Vasen und alles, was gesehen werden will.",
     description:
-      "Das offene Regal ist die leichteste Konfiguration des Systems: keine Türen, keine Klappen, nur Struktur. Es lebt vom Rhythmus der verchromten Rohre und der Tiefe seiner Fächer — und davon, was Sie hineinstellen.",
+      "Das offene Regal ist unsere leichteste Konfiguration: keine Türen, keine Klappen, nur Struktur. Es lebt vom Rhythmus der verchromten Rohre und der Tiefe seiner Fächer — und davon, was Sie hineinstellen.",
     details: [
       "6 offene Fächer",
       "Neubeschichtung aller Flächen in Wunschfarbe",
@@ -189,8 +189,8 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "haller-beistelltisch",
-    name: "Haller Beistelltisch",
+    slug: "beistelltisch",
+    name: "Beistelltisch",
     signature: "Sand",
     ort: "Wintergarten",
     image: "/media/tile-sand.jpg",
@@ -206,7 +206,7 @@ export const PRODUCTS: Product[] = [
     teaser:
       "Ein einzelnes Element, unendlich einsetzbar — als Nachttisch, Telefontisch, Podest.",
     description:
-      "Die kleinste Einheit des Systems: ein einzelnes offenes Element auf Nivellierfüßen. Neben dem Sofa, am Bett oder im Flur — der Beistelltisch ist der einfachste Weg, mit USM Haller anzufangen. Und in der Wunschfarbe der präziseste.",
+      "Die kleinste Einheit: ein einzelnes offenes Element auf Nivellierfüßen. Neben dem Sofa, am Bett oder im Flur — der Beistelltisch ist der einfachste Einstieg in unsere aufbereiteten Möbel. Und in der Wunschfarbe der präziseste.",
     details: [
       "1 offenes Fach",
       "Neubeschichtung aller Flächen in Wunschfarbe",
@@ -216,8 +216,8 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "haller-sideboard-xl",
-    name: "Haller Sideboard XL",
+    slug: "sideboard-xl",
+    name: "Sideboard XL",
     signature: "Graphit",
     ort: "Loft",
     image: "/media/tile-graphit.jpg",
@@ -246,8 +246,8 @@ export const PRODUCTS: Product[] = [
     ],
   },
   {
-    slug: "haller-highboard-vitrine",
-    name: "Haller Highboard S",
+    slug: "highboard-vitrine",
+    name: "Highboard S",
     signature: "Stahl",
     ort: "Maschinenhalle",
     image: "/media/tile-stahl.jpg",

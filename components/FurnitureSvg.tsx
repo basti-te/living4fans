@@ -16,8 +16,8 @@ type Props = {
 };
 
 /**
- * Parametrische Illustration eines USM-Haller-Möbels: verchromtes
- * Rohrgestell mit Kugelverbindern und pulverbeschichteten Flächen.
+ * Parametrische Illustration eines modularen Stahlrohr-Möbels:
+ * verchromtes Rohrgestell mit pulverbeschichteten Flächen.
  * Die Panelfarbe wird per CSS-Transition weich umgefärbt.
  */
 export default function FurnitureSvg({
