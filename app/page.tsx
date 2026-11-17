@@ -157,17 +157,11 @@ export default async function Home() {
             </Reveal>
             <Reveal delay={120}>
               <p className="body-copy">
-                Ein guter Möbelklassiker ist auf Jahrzehnte gebaut. Das verchromte
-                Stahlrohrgestell überdauert Moden, Umzüge und Generationen —
-                nur die Oberflächen tragen die Spuren der Zeit. Genau dort
-                setzen wir an: Statt neu zu produzieren, geben wir gebrauchten
-                Möbeln ein zweites Leben.
-              </p>
-              <p className="body-copy">
-                Jedes Stück wird vollständig zerlegt, technisch überholt und
-                neu pulverbeschichtet. Das Ergebnis ist von einem Neumöbel
-                praktisch nicht zu unterscheiden — nur nachhaltiger, schneller
-                lieferbar und in jeder Farbe erhältlich, die Sie sich wünschen.
+                Wir bewahren das Wertvolle – und machen daraus dein
+                Statement-Piece mit Geschichte. Aus gebrauchten Komponenten
+                entsteht ein Möbel, das dich lange begleitet. Wenn sich dein
+                Leben ändert, kann es mitgehen – weiterverwenden statt neu
+                kaufen und dabei Ressourcen und Budget schonen.
               </p>
               <div className="mt-40">
                 <Link href="/konzept" className="text-link">
