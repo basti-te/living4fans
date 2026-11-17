@@ -7,7 +7,7 @@ import { getColor } from "@/lib/colors";
 export const metadata: Metadata = {
   title: "Konzept",
   description:
-    "Warum aufbereitete Möbelklassiker die bessere Wahl sind: Handwerk, Nachhaltigkeit und individuelle Pulverbeschichtung bei Living4Fans.",
+    "Weiterverwenden statt neu kaufen: Aus gebrauchten Komponenten entstehen bei Living4Fans aufbereitete Möbel mit Geschichte — in Handarbeit und in Ihrer RAL-Wunschfarbe.",
 };
 
 export default function KonzeptPage() {
@@ -17,7 +17,8 @@ export default function KonzeptPage() {
         <div className="container">
           <span className="eyebrow">Unser Konzept</span>
           <h1 className="heading-display" style={{ maxWidth: "24ch" }}>
-            Wir bauen keine Möbel. Wir geben Klassikern ihr zweites Leben.
+            Wir bewahren das Wertvolle — und machen daraus Ihr
+            Statement-Piece mit Geschichte.
           </h1>
         </div>
       </section>
@@ -28,21 +29,22 @@ export default function KonzeptPage() {
         <div className="container">
           <div className="split">
             <Reveal>
-              <div className="split-label">Das System hinter dem Möbelstück</div>
+              <div className="split-label">Das Wertvolle bewahren</div>
             </Reveal>
             <Reveal delay={100}>
               <p className="body-copy">
-                In den 1960er-Jahren entstand ein modulares Baukastensystem
-                aus verchromten Stahlrohren, Verbindungskugeln und
-                pulverbeschichteten Metallflächen. Sechzig Jahre später
-                steht es in Museen — und in Millionen Büros und Wohnungen.
+                Gute Möbel sind auf Jahrzehnte gebaut: solide Materialien,
+                durchdachte Konstruktion, zeitlose Form. Trotzdem landen
+                sie viel zu oft in der Entsorgung — wenn ein Büro
+                aufgelöst, ein Haushalt verkleinert oder ein Umbau geplant
+                wird. Genau dort setzen wir an: Wir übernehmen diese
+                Stücke und bewahren, was an ihnen wertvoll ist.
               </p>
               <p className="body-copy">
-                Das Besondere: Jedes Element lässt sich zerstörungsfrei
-                zerlegen, umbauen und neu beschichten. Ein solcher
-                Möbelklassiker ist damit das vielleicht nachhaltigste Möbelstück,
-                das je gebaut wurde — vorausgesetzt, jemand kümmert sich
-                darum. Das ist unsere Arbeit.
+                Aus gebrauchten Komponenten entsteht in unserer Werkstatt
+                ein Möbel mit Geschichte — vollständig zerlegt, technisch
+                überholt und neu beschichtet. Kein anonymes Neuprodukt,
+                sondern ein Einzelstück, das Sie lange begleitet.
               </p>
             </Reveal>
           </div>
@@ -134,17 +136,18 @@ export default function KonzeptPage() {
         <div className="container">
           <div className="split">
             <Reveal>
-              <div className="split-label">Warum nicht einfach neu kaufen?</div>
+              <div className="split-label">Weiterverwenden statt neu kaufen</div>
             </Reveal>
             <Reveal delay={100}>
               <p className="body-copy">
-                Drei Gründe. Erstens: Nachhaltigkeit — ein aufbereitetes Möbelstück
+                Drei Gründe. Erstens: Nachhaltigkeit — die Weiterverwendung
                 spart den Großteil der Ressourcen, die eine Neuproduktion
-                benötigt. Zweitens: Verfügbarkeit — unsere Möbel sind in 4 bis
-                6 Wochen bei Ihnen, individuell beschichtet. Drittens: Die
-                Farbe. Bei uns ist die Wunschfarbe kein Aufpreis-Extra,
-                sondern der Kern des Angebots — auch Farbtöne, die es ab Werk
-                nie gab.
+                benötigt, und schont dabei auch Ihr Budget. Zweitens:
+                Wandelbarkeit — wenn sich Ihr Leben ändert, kann Ihr Möbel
+                mitgehen: umbauen, erweitern, neu beschichten statt
+                ersetzen. Drittens: die Farbe. Bei uns ist die Wunschfarbe
+                kein Aufpreis-Extra, sondern der Kern des Angebots — auch
+                Farbtöne, die es ab Werk nie gab.
               </p>
               <div className="mt-40" style={{ display: "flex", gap: 14, flexWrap: "wrap" }}>
                 <Link href="/shop" className="btn-filled">
